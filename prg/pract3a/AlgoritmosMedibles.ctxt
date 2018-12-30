@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=a\ e
+comment0.target=int\ busquedaLineal(int[],\ int)
+comment0.text=\ Busqueda\ lineal\r\n\ \ @param\ a\ array\ de\ enteros\r\n\ \ @param\ e\ elemento\ a\ buscar\r\n\ \ @return\ int,\ posicion\ de\ e\ en\ a\ o\ -1\ si\ e\ no\ esta\ en\ a\r\n
+comment1.params=a
+comment1.target=void\ seleccion(int[])
+comment1.text=\ Metodo\ de\ ordenacion\ por\ seleccion\r\n\ \ @param\ a\ array\ de\ enteros\r\n
+comment2.params=a
+comment2.target=void\ insercion(int[])
+comment2.text=\ Metodo\ de\ ordenacion\ por\ insercion\r\n\ \ @param\ a\ array\ de\ enteros\r\n
+comment3.params=a\ i\ f
+comment3.target=void\ mergeSort(int[],\ int,\ int)
+comment3.text=\ mergeSort\:\ metodo\ de\ ordenacion\r\n\ \ @param\ a\ array\ de\ enteros\r\n\ \ @param\ i\ posicion\ inicial\ a\ considerar\r\n\ \ @param\ f\ posicion\ final\ a\ considerar\r\n
+comment4.params=a\ i\ h\ f
+comment4.target=void\ mezclaNatural(int[],\ int,\ int,\ int)
+comment4.text=\ Mezcla\ natural\ para\ mergesort\r\n\ \ @param\ a\ array\ de\ enteros\r\n\ \ @param\ i\ posicion\ inicial\ a\ considerar\r\n\ \ @param\ f\ posicion\ final\ a\ considerar\r\n\ \ @param\ h\ posicion\ mitad\ a\ considerar\r\n
+numComments=5

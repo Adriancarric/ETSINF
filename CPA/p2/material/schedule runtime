@@ -1,0 +1,12 @@
+OMP_NUM_THREADS=6 OMP_SCHEDULE="static,0" ./simil-ejercicio3b donantes.txt pacientes.txt salida.txt
+
+OMP_NUM_THREADS=6 OMP_SCHEDULE="static,0" ./simil-ejercicio4 donantes.txt pacientes.txt salida.txt
+
+OMP_NUM_THREADS=6 OMP_SCHEDULE="static,1" ./simil-ejercicio3b donantes.txt pacientes.txt salida.txt
+
+OMP_NUM_THREADS=6 OMP_SCHEDULE="static,1" ./simil-ejercicio4 donantes.txt pacientes.txt salida.txt
+
+OMP_NUM_THREADS=6 OMP_SCHEDULE="dynamic,1" ./simil-ejercicio3b donantes.txt pacientes.txt salida.txt
+
+OMP_NUM_THREADS=6 OMP_SCHEDULE="dynamic,1" ./simil-ejercicio4 donantes.txt pacientes.txt salida.txt
+

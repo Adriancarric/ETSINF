@@ -1,0 +1,13 @@
+const zmq = require('zmq')
+let req = zmq.socket('req')
+let id = process.argv[3]
+let respuesta = process.argv[4]
+let urlBack = process.argv[2]
+req.identity(id)
+req.connect(urlBack)
+req.on('message', (w,sep2 ,c,sep,msg)=> {
+	setTimeout(()=> {
+		rep.send([id,'',c,'',respuesta])
+	}, 1000)
+})
+req.send([id,'','','',''])

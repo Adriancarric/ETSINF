@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=GrupoFiguras
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ GrupoFiguras\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=c
+comment1.target=void\ anyadeCirculo(Circulo)
+comment2.params=t
+comment2.target=void\ anyadeTriangulo(Triangulo)
+comment3.params=o
+comment3.target=void\ andyadeObjeto(java.lang.Object)
+comment4.params=f
+comment4.target=void\ anyadeFigura(Figura)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=obj
+comment6.target=boolean\ equals(java.lang.Object)
+numComments=7

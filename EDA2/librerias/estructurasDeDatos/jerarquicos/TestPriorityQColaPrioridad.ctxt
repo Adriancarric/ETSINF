@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=TestPriorityQColaPrioridad
+comment0.text=\r\n\ Test\ de\ prueba\ para\ la\ implementaci\u00F3n\ de\ Cola\ de\ Prioridad\r\n\ utilizando\ una\ ProrityQueue.\ Verifica\ los\ m\u00E9todos\r\n\ insertar\ y\ eliminarMin\ de\ la\ clase\ PriorityQColaPrioridad\r\n\ \r\n\ @version\ Curso\ 2017/18\r\n
+comment1.params=
+comment1.target=void\ main()
+numComments=2

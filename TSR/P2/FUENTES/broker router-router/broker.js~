@@ -1,0 +1,27 @@
+const zmq = require('zmq')
+let cli=[], req=[], workers=[]
+let sc = zmq.socket('router') // frontend
+let sw = zmq.socket('router') // backend
+let portF = process.argv[2]
+let portB = process.argv[3]
+let contador = 0
+sc.bind('tcp://*:'+portF)
+sw.bind('tcp://*:'+portB)
+sc.on('message',(c,sep,m)=> {
+	if (workers.length==0) { 
+		cli.push(c); req.push(m)
+	} else {
+		sw.send([workers.shift(),'',c,'',m])
+	}
+})
+sw.on('message',(w,sep,c,sep2,r)=> {
+    if (c=='') {workers.push(w); return}
+	if (cli.length>0) { 
+		sw.send([w,'',
+			cli.shift(),'',req.shift()])
+	} else {
+		workers.push(w)
+	}
+	contador++
+	sc.send(c,'',r, contador)
+})

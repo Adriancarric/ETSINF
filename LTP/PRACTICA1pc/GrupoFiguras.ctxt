@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=void\ anyadeCirculo(Circulo)
+comment1.params=t
+comment1.target=void\ anyadeTriangulo(Triangulo)
+comment2.params=o
+comment2.target=void\ andyadeObjeto(java.lang.Object)
+comment3.params=f
+comment3.target=void\ anyadeFigura(Figura)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=obj
+comment5.target=boolean\ equals(java.lang.Object)
+comment6.params=
+comment6.target=double\ area()
+comment7.params=
+comment7.target=double\ volumen()
+numComments=8

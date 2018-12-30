@@ -1,0 +1,6 @@
+Hilo 2 de 3: Longitud min/med/max : 823.000000 / 972.966667 / 1135.000000
+Tiempo: 38.838234 s 
+Hilo 1 de 3: Longitud min/med/max : 792.000000 / 918.200000 / 1044.000000
+Hilo 0 de 3: Longitud min/med/max : 589.000000 / 735.400000 / 995.000000
+TOTAL: Longitud min/med/max : 589.000000 / 875.522222 / 1135.000000 
+El tiempo de buscamasparecidos es de 38.838327 segundos
