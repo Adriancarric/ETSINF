@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="ea704d57-0b93-43b7-8f49-17955d81e706"
+  name="BikeClubLib.Persistence" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="6596ef91-533c-48e5-9e43-fa1f48b2e011"
+        name="EntityFrameworkDAL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8870632c-24d2-4086-aa7d-4efcd884e81e">
+            <interfaceMoniker
+              Id="43025b08-3a47-4bf8-9b5f-2bac5a8d9f2f"
+              LastKnownName="IDAL"
+              LastKnownLocation="Package_1813.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="663f7352-bdfb-4a81-849c-5f9ce3e813e9"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="dbContext"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5c4a7291-ed12-4c59-b0b3-2582bf91ed29"
+              LastKnownName="BikeClubDbContext"
+              LastKnownLocation="Package_1813.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c85ed60-3bbf-4a18-8e8d-16a4cea58196"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b8474291-beab-428f-8a2c-39154e3a03fe"
+                  name="dbContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5c4a7291-ed12-4c59-b0b3-2582bf91ed29"
+        name="BikeClubDbContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="100d584b-cce6-41e9-919a-6856d2a8f4b5"
+            isSubstitutable="false">
+            <classMoniker
+              Id="88e0d2ac-cf39-4941-98e2-29a0a93e815c"
+              LastKnownName="DbContext"
+              LastKnownLocation="BikeClubModel.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="43025b08-3a47-4bf8-9b5f-2bac5a8d9f2f"
+        name="IDAL"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

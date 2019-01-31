@@ -1,0 +1,1178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="c591ffc1-a600-4bff-9cdf-c06d3b87209f"
+  name="BikeClubModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="33ab04b3-23d2-4500-acf0-4cc3fefbf0b4"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="46e533e2-793f-4476-8a20-d25eeb49fdb7">
+          <propertyInstance
+            Id="0f193359-36dc-4a81-b347-4ebb9f68edf3"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8831ac17-ea70-46b1-b895-5b847ac87121">
+          <propertyInstance
+            Id="3b1c42ae-1016-48ef-804b-cc5d28dfd355"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="3756ce37-e7a8-4c3c-874c-2e19de16d614">
+          <propertyInstance
+            Id="623307b6-cbac-4d13-8c8d-57aa90d31b1f"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="dbada9fd-380d-4d8b-8ba8-ec23f4e18044"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="64803a3a-bd36-4dc3-93ed-afb9f51ac442">
+          <propertyInstance
+            Id="b70c23cd-9aa2-4e27-9629-38399892605e"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="769c3ff7-2039-4bb3-acdf-385272917cc7">
+          <propertyInstance
+            Id="f6c78d43-9de1-47b1-b39d-58046c6274b4"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c79b4766-def1-4358-98a2-3bdd3a2588f4">
+          <propertyInstance
+            Id="632fade2-3492-44e0-9d81-bff6080e3146"
+            name="ProjectPath"
+            value="ClassTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|EnumTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|InterfaceTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|StructTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="12e6f348-13d8-4807-a2de-f698f791a503">
+          <propertyInstance
+            Id="310f4577-ef46-44b2-9d6f-d0b2b773258f"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="13ef797c-b5e4-47e5-91f9-a0265c29d7c9">
+          <propertyInstance
+            Id="49832fc0-cdca-411a-895e-bb8555ca8d29"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="ba07914c-cebc-4283-a4ff-c05615600ee4">
+          <propertyInstance
+            Id="a23bcabe-db47-4615-b458-d331aba619e2"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="899387de-a225-42c3-85dd-a537bb5b349c">
+          <propertyInstance
+            Id="c0d7bd99-6081-4f06-968a-29f19738b3fb"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="c90f7cb7-e3e3-4677-a0a1-d1273ef66ec5">
+      <profileInstance
+        Id="1d91f732-2a9b-4c44-9bb2-f9e2cc3cb5b0"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="ee603f82-32b2-40ec-8cc2-39a2184d6364">
+      <profileInstance
+        Id="17341766-9c01-4e75-954f-7604bd4c064f"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d623467e-3e74-4079-a535-8625e92782cc"
+        LastKnownName="BikeClubLib.Entities"
+        LastKnownLocation="Package_1624.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0c02846f-6e80-435b-88de-133fe703b146"
+        name="Known User"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="9f8fd8e3-20d3-4748-890f-dc750217ee7b"
+        name="Unknown User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d493cf0a-177a-4214-8df3-dd05844cc84f"
+            isDerived="false"
+            sourceEndRoleName="Unknown User"
+            targetEndRoleName="Register"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b74d8e08-f748-48a1-8a1a-6e4537637a07"
+              LastKnownName="Register"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd013202-0f0d-42fc-a9ed-3a0407938f34"
+                  name="Unknown User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7134343f-4330-4423-9bf0-891691a8572f"
+                  name="Register"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b74d8e08-f748-48a1-8a1a-6e4537637a07"
+        name="Register"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="74bcc583-c1d3-4d36-8a9f-5e5313d6199e"
+        name="Admin"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="45dba4b7-4a10-4a0c-9c3a-f14ecbcaef78"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="0c02846f-6e80-435b-88de-133fe703b146"
+              LastKnownName="Known User"
+              LastKnownLocation="BikeClubModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="ad944f90-7b0b-422b-a5f2-ea10b22a31b8"
+            isDerived="false"
+            sourceEndRoleName="admin"
+            targetEndRoleName="Set up first president"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e3f8ddef-57e7-4552-89b7-c3e4b8aab6f0"
+              LastKnownName="Set up first president"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12ed17d1-5d92-4282-9663-3c93a2c69ec2"
+                  name="admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6e3ba9d-78a7-4d20-9ec3-f2ba24d74b8e"
+                  name="Set up first president"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e3f8ddef-57e7-4552-89b7-c3e4b8aab6f0"
+        name="Set up first president"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="200afa8a-fe3a-4beb-9962-33fb42ca9120"
+        name="login"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2a3bd597-0ce1-40ba-b5a8-03c13eedc395"
+            isDerived="false"
+            sourceEndRoleName="login"
+            targetEndRoleName="Known User"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="0c02846f-6e80-435b-88de-133fe703b146"
+              LastKnownName="Known User"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ac2065c-76b3-4a01-8662-f433307ae4a0"
+                  name="login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96cc6007-af4d-47e8-9bed-2b2ec23d7109"
+                  name="Known User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7b936383-017a-4672-b3e8-2fe7443a128a"
+        name="Member"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="758ddd31-e45f-4291-afba-3da13644a0a3"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="0c02846f-6e80-435b-88de-133fe703b146"
+              LastKnownName="Known User"
+              LastKnownLocation="BikeClubModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="e6f46894-18d3-4100-b2d2-26f73a2ae82e"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Register son"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c15ddbf6-fac1-462f-870d-4564763ac5bc"
+              LastKnownName="Register son"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da6583d9-6210-4739-8bed-6d847f47068d"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ef10f292-8408-44c8-a935-f73a26c80c59"
+                  name="Register son"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5d6f1a5e-022d-4901-ba95-919d696df707"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Unregister"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e36b9562-ddff-422e-88bf-b7bb751d88eb"
+              LastKnownName="Unregister"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5c50c401-573f-458f-8260-5b56271bc182"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6829aa87-9909-4198-87b0-40616845d5f4"
+                  name="Unregister"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b78c2c44-a0f5-4b0e-ae5b-d24da1bf9cdd"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Sign up for an event"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b2b89063-3e3c-4f1d-975d-39044373d03d"
+              LastKnownName="Sign up for an event"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="582c20e4-5372-445c-a337-0c8fc785dcdd"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f8bc4aa0-1b4f-4c0a-858f-a1f15c3c7dc6"
+                  name="Sign up for an event"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="759a9ce3-51ee-4620-a0f7-b18dd367fec4"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Vote"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="615e3562-e2e7-49a8-b971-d69ef54ef235"
+              LastKnownName="Vote"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ad666cec-a948-47ff-9103-40e19482b15d"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dfc77869-44d3-4f32-a04d-280e67fb993c"
+                  name="Vote"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dc74680f-443c-446b-bbde-35b1c453805e"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Define route"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b30f0b02-22b9-446d-b881-fc6beec4e543"
+              LastKnownName="Define route"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a2f2812b-bb6a-475a-a54d-fe1123468d16"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7243cd61-d3d2-4130-a957-f4c70b006f2f"
+                  name="Define route"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="69eaef3f-5b04-412a-96ab-9a7c7faad0ae"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Program an event"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="65d40dac-8151-4a05-a52a-b634817d821d"
+              LastKnownName="Program an event"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5738870c-8d55-4053-bb4d-45ed70480025"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e568713-662f-4e20-b11a-ff4dac47e8fd"
+                  name="Program an event"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="59a7b64c-3719-4d61-872b-161e15f95e03"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Provide infromation about an event"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f1e0bcd1-fc11-45ba-b382-11cb21bd234b"
+              LastKnownName="Provide information about an event"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16aa32dd-6998-4da2-ba5f-f22191001c93"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2191937f-8545-4019-be1e-52d98caf9876"
+                  name="Provide infromation about an event"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c15ddbf6-fac1-462f-870d-4564763ac5bc"
+        name="Register son"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e36b9562-ddff-422e-88bf-b7bb751d88eb"
+        name="Unregister"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b2b89063-3e3c-4f1d-975d-39044373d03d"
+        name="Sign up for an event"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="615e3562-e2e7-49a8-b971-d69ef54ef235"
+        name="Vote"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b30f0b02-22b9-446d-b881-fc6beec4e543"
+        name="Define route"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f3426b4b-12fc-4e6a-8a60-eb4098de216f">
+            <useCaseMoniker
+              Id="65d40dac-8151-4a05-a52a-b634817d821d"
+              LastKnownName="Program an event"
+              LastKnownLocation="BikeClubModel.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="65d40dac-8151-4a05-a52a-b634817d821d"
+        name="Program an event"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6c390a54-1481-408d-b992-8e1cb09020e0"
+        name="President"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="83c4fd99-e2fd-42e6-b95d-b8f1852bb12e"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="7b936383-017a-4672-b3e8-2fe7443a128a"
+              LastKnownName="Member"
+              LastKnownLocation="BikeClubModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="fb6c9bd1-0283-43a6-b565-2728cee15f11"
+            isDerived="false"
+            sourceEndRoleName="President"
+            targetEndRoleName="Start elections"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3297bece-480b-40d8-81d2-1daf9b55492b"
+              LastKnownName="Start elections"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2f10fbd3-6423-44a6-acb4-b410105be55c"
+                  name="President"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e6f78fb6-22f1-4d2f-a0b4-7b67bb52b87f"
+                  name="Start elections"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="eb4fb52d-54db-4edc-ab99-62aea9e26d91"
+            isDerived="false"
+            sourceEndRoleName="President"
+            targetEndRoleName="Set up new president and vocals"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="169cf0b1-c0d2-4a33-a759-a29a6594208b"
+              LastKnownName="Set up new president and vocals"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eab38694-1577-41e2-886d-2bd95252487f"
+                  name="President"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59488b0f-3ea2-45e6-b2da-a206f292d58c"
+                  name="Set up new president and vocals"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="38e79e08-67f8-4b42-b0f2-205acfd46260"
+            isDerived="false"
+            sourceEndRoleName="President"
+            targetEndRoleName="Result of elections"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bdc10c67-e503-4085-b2d7-a1bc5ac30f0a"
+              LastKnownName="Result of elections"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b98812e6-32d6-4c1d-9336-2dd02980ed3d"
+                  name="President"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="52b0d989-76f6-4524-a3b6-764476f80686"
+                  name="Result of elections"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="501c697a-60c8-41ba-a75e-740cf65fe97f"
+            isDerived="false"
+            sourceEndRoleName="President"
+            targetEndRoleName="Define treasurer"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="540db8b3-b6fc-41bb-99c6-849e378195dd"
+              LastKnownName="Set up treasurer"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0dd23611-c312-4548-86a5-2061f68534b5"
+                  name="President"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2f5f6eff-bb5b-467f-af2f-0f403a47ebf9"
+                  name="Define treasurer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3297bece-480b-40d8-81d2-1daf9b55492b"
+        name="Start elections"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="3ca7f8f1-53bc-4c78-bf9f-3f8030c64dfc">
+            <useCaseMoniker
+              Id="32bcef02-1c9c-4505-8fe2-c079e891c12f"
+              LastKnownName="Initialize vote data"
+              LastKnownLocation="BikeClubModel.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="169cf0b1-c0d2-4a33-a759-a29a6594208b"
+        name="Set up new president and vocals"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="20bdd516-a37c-418a-8714-d7a42241054d">
+            <useCaseMoniker
+              Id="6a7737bd-8869-40e1-bab2-1bf66c949475"
+              LastKnownName="Destroy vote data"
+              LastKnownLocation="BikeClubModel.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bdc10c67-e503-4085-b2d7-a1bc5ac30f0a"
+        name="Result of elections"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="540db8b3-b6fc-41bb-99c6-849e378195dd"
+        name="Set up treasurer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="06d34102-80f3-425a-9c17-6d2ee10f23f9"
+        name="Responsible of an event"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f1e0bcd1-fc11-45ba-b382-11cb21bd234b"
+        name="Provide information about an event"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="58ab810d-f484-40ee-b9db-d5e237a4e206"
+        name="Treasurer"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="11ba1199-48bf-4c28-8102-4ea157093053"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="7b936383-017a-4672-b3e8-2fe7443a128a"
+              LastKnownName="Member"
+              LastKnownLocation="BikeClubModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="bfd42693-8568-4aee-a3fd-3db770af5861"
+            isDerived="false"
+            sourceEndRoleName="Treasurer"
+            targetEndRoleName="Retrieve money data"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3b465602-b347-4173-8a2d-7a95eef2a86a"
+              LastKnownName="Retrieve money data"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aea87bb2-f7d4-4a6e-aad3-ff73c26396de"
+                  name="Treasurer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e44507bc-e957-49db-9515-7a7b723ac062"
+                  name="Retrieve money data"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3b465602-b347-4173-8a2d-7a95eef2a86a"
+        name="Retrieve money data"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="75fea336-aaf7-4dab-b0a8-e0fea2d05b4a"
+        name="Clock"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b0c24229-c3eb-41c3-b37a-6d92dd756164"
+            isDerived="false"
+            sourceEndRoleName="Clock"
+            targetEndRoleName="Fees to the bank"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="25325764-1ec7-4f87-8a2d-551e488e82db"
+              LastKnownName="Fees to the bank"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6769e82a-f1e6-4cde-869f-754c80f31d06"
+                  name="Clock"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23dfc5df-b994-495c-99c9-e74b05117e3d"
+                  name="Fees to the bank"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="25325764-1ec7-4f87-8a2d-551e488e82db"
+        name="Fees to the bank"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e4de17d0-0f46-42c9-83c7-7f08778f39e4"
+        name="Define first president"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6a742886-6777-4d7c-83bf-05189a64f211"
+            isDerived="false"
+            sourceEndRoleName="Define first president"
+            targetEndRoleName="Administrator"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="0c2d5c3b-ba67-4865-af2f-a8ecdd4dd507"
+              LastKnownName="Administrator"
+              LastKnownLocation="BikeClubModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76adf739-d6e3-468b-9566-6dc36a001a42"
+                  name="Define first president"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f29bbe3-8254-4b20-83fb-11fde72edc15"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="32bcef02-1c9c-4505-8fe2-c079e891c12f"
+        name="Initialize vote data"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6a7737bd-8869-40e1-bab2-1bf66c949475"
+        name="Destroy vote data"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6f47b89c-4a8b-409f-b740-375ae080a797"
+        name="DBTest"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="f731d53e-03cb-4134-9b77-161edcee6a46">
+            <interfaceMoniker
+              Id="43025b08-3a47-4bf8-9b5f-2bac5a8d9f2f"
+              LastKnownName="IDAL"
+              LastKnownLocation="Package_1813.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2f8d1c1a-3b20-4ef1-a4ff-879c1bc078dc"
+        name="BusinessLogicTest"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="985be372-a0a0-4105-b63e-4ad669aa65e5">
+            <interfaceMoniker
+              Id="6744e8e5-7297-4e03-be10-920dd8dd6bd8"
+              LastKnownName="IBikeClubServices"
+              LastKnownLocation="Package1_1813.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="88e0d2ac-cf39-4941-98e2-29a0a93e815c"
+        name="DbContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ea704d57-0b93-43b7-8f49-17955d81e706"
+        LastKnownName="BikeClubLib.Persistence"
+        LastKnownLocation="Package_1813.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="33a27284-015e-436b-b672-7e65c281470c"
+        LastKnownName="BikeClubLib.Services"
+        LastKnownLocation="Package1_1813.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0c2d5c3b-ba67-4865-af2f-a8ecdd4dd507"
+        name="Administrator"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="c7717b8f-7e56-46d9-a4d1-97415370515c"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="0c02846f-6e80-435b-88de-133fe703b146"
+              LastKnownName="Known User"
+              LastKnownLocation="BikeClubModel.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

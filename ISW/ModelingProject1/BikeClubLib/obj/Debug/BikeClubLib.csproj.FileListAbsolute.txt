@@ -1,0 +1,9 @@
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\bin\Debug\BikeClubLib.dll
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\bin\Debug\BikeClubLib.pdb
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\bin\Debug\EntityFramework.dll
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\bin\Debug\EntityFramework.xml
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\obj\Debug\BikeClubLib.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\obj\Debug\BikeClubLib.dll
+C:\Users\User\Source\Repos\2018-upv-isw-ANEJ\ModelingProject1\BikeClubLib\obj\Debug\BikeClubLib.pdb

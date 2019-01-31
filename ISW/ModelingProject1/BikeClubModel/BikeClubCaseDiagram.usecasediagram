@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="64a62f14-533b-494a-8bb6-49b409d87007" name="BikeClubCaseDiagram" linkedPackageId="c253538e-00a4-422b-9a1a-081d813487a1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="b81e3867-68dd-406e-98cc-3f66ccbe409a" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="33ab04b3-23d2-4500-acf0-4cc3fefbf0b4" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="30e90947-f127-4ba6-84a1-487183ce29cb">
+          <propertyInstance Id="c86fe089-9c10-4d55-9b68-953d6ffba4d7" name="BaseName">
+            <elementDefinition Id="0f193359-36dc-4a81-b347-4ebb9f68edf3" />
+          </propertyInstance>
+          <elementDefinition Id="46e533e2-793f-4476-8a20-d25eeb49fdb7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="62e8e9bb-63cd-408e-b0af-125158e64d49">
+          <propertyInstance Id="82fa115f-537d-499d-960a-50341b8fc49b" name="ClrAttributes">
+            <elementDefinition Id="3b1c42ae-1016-48ef-804b-cc5d28dfd355" />
+          </propertyInstance>
+          <elementDefinition Id="8831ac17-ea70-46b1-b895-5b847ac87121" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="43d6fb3d-ef00-4c0b-bd66-b68fc2ae16c2">
+          <propertyInstance Id="6d4e612f-f089-4214-9c7a-7573c88ede6c" name="Usings">
+            <elementDefinition Id="623307b6-cbac-4d13-8c8d-57aa90d31b1f" />
+          </propertyInstance>
+          <elementDefinition Id="3756ce37-e7a8-4c3c-874c-2e19de16d614" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="44e4f991-f700-4797-afda-67ad2bd85058" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="dbada9fd-380d-4d8b-8ba8-ec23f4e18044" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2cd7a759-24b1-4ede-8fab-341ad2253c96">
+          <propertyInstance Id="5ee8eb43-e14d-4845-9e08-39b2c8092f65" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="b70c23cd-9aa2-4e27-9629-38399892605e" />
+          </propertyInstance>
+          <elementDefinition Id="64803a3a-bd36-4dc3-93ed-afb9f51ac442" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="947e7c4e-6291-46ba-9fbb-b1303e80d03a">
+          <propertyInstance Id="77c17e22-663e-437a-8230-f621fde47abd" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="f6c78d43-9de1-47b1-b39d-58046c6274b4" />
+          </propertyInstance>
+          <elementDefinition Id="769c3ff7-2039-4bb3-acdf-385272917cc7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="04ea6597-4a18-439e-a481-6e601ca755db">
+          <propertyInstance Id="bd10e33c-20fe-4f30-b72d-1b43bf3ba649" name="ProjectPath" value="ClassTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|EnumTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|InterfaceTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|StructTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj">
+            <elementDefinition Id="632fade2-3492-44e0-9d81-bff6080e3146" />
+          </propertyInstance>
+          <elementDefinition Id="c79b4766-def1-4358-98a2-3bdd3a2588f4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d71aca5e-2e91-49a6-be29-7bfc7b55afdc">
+          <propertyInstance Id="208c7636-67de-4e3a-9f2b-87254728959b" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="310f4577-ef46-44b2-9d6f-d0b2b773258f" />
+          </propertyInstance>
+          <elementDefinition Id="12e6f348-13d8-4807-a2de-f698f791a503" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d8a3a3ee-5027-4807-a4eb-66eabf43a310">
+          <propertyInstance Id="f5bf3354-320d-42a6-a193-f13097628ad2" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="49832fc0-cdca-411a-895e-bb8555ca8d29" />
+          </propertyInstance>
+          <elementDefinition Id="13ef797c-b5e4-47e5-91f9-a0265c29d7c9" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3f2b0be1-018c-4af9-b39b-7d2fd2ed0c90">
+          <propertyInstance Id="6eb6ce9f-5919-49c2-afb0-92be131013ef" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="a23bcabe-db47-4615-b458-d331aba619e2" />
+          </propertyInstance>
+          <elementDefinition Id="ba07914c-cebc-4283-a4ff-c05615600ee4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ab79a97a-11bf-4153-ba15-38decfb67119">
+          <propertyInstance Id="d70fc569-0db9-45fd-929a-c663b211f650" name="Parameters">
+            <elementDefinition Id="c0d7bd99-6081-4f06-968a-29f19738b3fb" />
+          </propertyInstance>
+          <elementDefinition Id="899387de-a225-42c3-85dd-a537bb5b349c" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="4c560bc0-dc75-41a7-bd90-042f8bd77c44" name="Known User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c02846f-6e80-435b-88de-133fe703b146" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="da0a3ac9-f027-4273-8e10-39b76065746f" name="Unknown User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f8fd8e3-20d3-4748-890f-dc750217ee7b" />
+        <targetEnds>
+          <association Id="735af67d-db58-40ed-a624-970c9d93c850" isDerived="false" sourceEndRoleName="Unknown User" targetEndRoleName="Register" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="127fa90f-c85b-4b3f-9cf4-ec9543c9c5c9" LastKnownName="Register" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc7391b1-5d4a-4480-96ba-52402a6e125a" name="Unknown User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fd013202-0f0d-42fc-a9ed-3a0407938f34" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3fffaab9-4ee3-4ef9-ad77-6b044d42ece3" name="Register" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7134343f-4330-4423-9bf0-891691a8572f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d493cf0a-177a-4214-8df3-dd05844cc84f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="127fa90f-c85b-4b3f-9cf4-ec9543c9c5c9" name="Register" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b74d8e08-f748-48a1-8a1a-6e4537637a07" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e5590c69-32b7-458a-ad52-080ae20c0470" name="login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="200afa8a-fe3a-4beb-9962-33fb42ca9120" />
+        <targetEnds>
+          <association Id="979833b7-97ad-404f-b1e0-2d929090bfab" isDerived="false" sourceEndRoleName="login" targetEndRoleName="Known User" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="4c560bc0-dc75-41a7-bd90-042f8bd77c44" LastKnownName="Known User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3dc844b8-081c-4007-be28-4ea0893cde4b" name="login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6ac2065c-76b3-4a01-8662-f433307ae4a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25240267-e473-4fdb-a403-93087cbaf437" name="Known User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96cc6007-af4d-47e8-9bed-2b2ec23d7109" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a3bd597-0ce1-40ba-b5a8-03c13eedc395" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="46372a74-3e23-4289-b2b8-1dba3d57924e" name="Member" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b936383-017a-4672-b3e8-2fe7443a128a" />
+        <generalsInternal>
+          <generalization Id="f7d57152-ac3b-4acd-890f-b40f19066b18" isSubstitutable="false">
+            <actorMoniker Id="4c560bc0-dc75-41a7-bd90-042f8bd77c44" LastKnownName="Known User" />
+            <elementDefinition Id="758ddd31-e45f-4291-afba-3da13644a0a3" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="27da54d1-31ff-4788-b825-77567a0dd3be" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Register son" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4d42d5ee-27cb-48f4-8f95-0ca0c293768f" LastKnownName="Register son" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41a0534d-95aa-43fd-8e49-1845ddb5cdcf" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="da6583d9-6210-4739-8bed-6d847f47068d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c66daf40-3843-4f44-b23f-70ede42d999e" name="Register son" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ef10f292-8408-44c8-a935-f73a26c80c59" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6f46894-18d3-4100-b2d2-26f73a2ae82e" />
+          </association>
+          <association Id="f54facf3-2584-4a33-abcb-7a2e85f99362" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Unregister" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bf4f3764-838a-4ec2-8bf5-445041d5c7a7" LastKnownName="Unregister" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b561a39a-4165-4ca4-92ee-9549bffa7c51" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5c50c401-573f-458f-8260-5b56271bc182" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb37a5eb-36bf-4546-82d4-f9df8a39fbd8" name="Unregister" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6829aa87-9909-4198-87b0-40616845d5f4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d6f1a5e-022d-4901-ba95-919d696df707" />
+          </association>
+          <association Id="d9114d5e-ea33-4132-9f91-4c1623cc5556" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Sign up for an event" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8634c714-0a1f-426b-82cb-db64458771d5" LastKnownName="Sign up for an event" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d5fc7f9d-e2eb-423d-a117-fc736a42b1eb" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="582c20e4-5372-445c-a337-0c8fc785dcdd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31276115-a071-4c1e-853d-a6445e6e5756" name="Sign up for an event" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f8bc4aa0-1b4f-4c0a-858f-a1f15c3c7dc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b78c2c44-a0f5-4b0e-ae5b-d24da1bf9cdd" />
+          </association>
+          <association Id="5b6bf7ba-f6d0-42e7-a30f-93b6d6f1b664" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Vote" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d6008e31-6bce-4ad9-a3a2-d580c616d8f8" LastKnownName="Vote" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e72a2d2-d033-4303-a5ec-b6ded16efd51" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ad666cec-a948-47ff-9103-40e19482b15d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0dce6def-7be8-4087-9765-2fa736f2db97" name="Vote" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dfc77869-44d3-4f32-a04d-280e67fb993c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="759a9ce3-51ee-4620-a0f7-b18dd367fec4" />
+          </association>
+          <association Id="27b917e1-7da1-4ca9-a846-c21533accfc7" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Define route" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="29260aa0-16c2-46b6-8d12-238a09682603" LastKnownName="Define route" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="01d0985a-c658-416f-8823-0d1be0ec9ef9" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a2f2812b-bb6a-475a-a54d-fe1123468d16" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e70f64fa-f095-44f6-848f-22b45cdba675" name="Define route" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7243cd61-d3d2-4130-a957-f4c70b006f2f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dc74680f-443c-446b-bbde-35b1c453805e" />
+          </association>
+          <association Id="07ea1df8-c6bd-4ca5-8312-d5d757329f68" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Program an event" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dae1640a-efe6-4939-a2b1-12a91dffd2ce" LastKnownName="Program an event" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1ac66c98-4d85-47ad-823e-5bb540e3c22b" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5738870c-8d55-4053-bb4d-45ed70480025" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a67cc86-c1e6-4ba7-b27d-9545b97f1d63" name="Program an event" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9e568713-662f-4e20-b11a-ff4dac47e8fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="69eaef3f-5b04-412a-96ab-9a7c7faad0ae" />
+          </association>
+          <association Id="7464ee3b-6d32-489b-a808-455eb4df7835" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Provide infromation about an event" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2d61e44e-7646-4826-b350-8bf92ceb4579" LastKnownName="Provide information about an event" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f890c11-e39a-4f10-94c2-b8c94a060cf1" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="16aa32dd-6998-4da2-ba5f-f22191001c93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="42e5486d-2c68-471c-9e6d-bc02bddcec3e" name="Provide infromation about an event" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2191937f-8545-4019-be1e-52d98caf9876" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="59a7b64c-3719-4d61-872b-161e15f95e03" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4d42d5ee-27cb-48f4-8f95-0ca0c293768f" name="Register son" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c15ddbf6-fac1-462f-870d-4564763ac5bc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bf4f3764-838a-4ec2-8bf5-445041d5c7a7" name="Unregister" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e36b9562-ddff-422e-88bf-b7bb751d88eb" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8634c714-0a1f-426b-82cb-db64458771d5" name="Sign up for an event" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b2b89063-3e3c-4f1d-975d-39044373d03d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d6008e31-6bce-4ad9-a3a2-d580c616d8f8" name="Vote" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="615e3562-e2e7-49a8-b971-d69ef54ef235" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="29260aa0-16c2-46b6-8d12-238a09682603" name="Define route" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b30f0b02-22b9-446d-b881-fc6beec4e543" />
+        <extendedCases>
+          <extend Id="287c17c7-bdff-4814-95f4-39a10913870f">
+            <useCaseMoniker Id="dae1640a-efe6-4939-a2b1-12a91dffd2ce" LastKnownName="Program an event" />
+            <elementDefinition Id="f3426b4b-12fc-4e6a-8a60-eb4098de216f" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dae1640a-efe6-4939-a2b1-12a91dffd2ce" name="Program an event" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="65d40dac-8151-4a05-a52a-b634817d821d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="e6244545-24e2-465e-a310-448d187d598f" name="President" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6c390a54-1481-408d-b992-8e1cb09020e0" />
+        <generalsInternal>
+          <generalization Id="9843614b-d89c-4b41-93c2-7fdccc62541b" isSubstitutable="false">
+            <actorMoniker Id="46372a74-3e23-4289-b2b8-1dba3d57924e" LastKnownName="Member" />
+            <elementDefinition Id="83c4fd99-e2fd-42e6-b95d-b8f1852bb12e" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="e59d016b-e59b-4f26-8ddd-216a3ea83852" isDerived="false" sourceEndRoleName="President" targetEndRoleName="Start elections" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2faf7385-87f9-47b8-b06f-968ecae030d8" LastKnownName="Start elections" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27088731-ad05-46eb-998f-61819a706d6f" name="President" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2f10fbd3-6423-44a6-acb4-b410105be55c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="19782805-03de-4063-8130-57e0b4ea70bf" name="Start elections" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e6f78fb6-22f1-4d2f-a0b4-7b67bb52b87f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fb6c9bd1-0283-43a6-b565-2728cee15f11" />
+          </association>
+          <association Id="ee83d7d7-b718-4162-862a-46fe2a73e5f5" isDerived="false" sourceEndRoleName="President" targetEndRoleName="Set up new president and vocals" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8750106f-f1be-4df1-bd6e-ad8c3888668a" LastKnownName="Set up new president and vocals" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a649b5a-00ad-452f-b09b-8844da7cd11e" name="President" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eab38694-1577-41e2-886d-2bd95252487f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ef7de46-b9df-468f-8b4a-3251d0001897" name="Set up new president and vocals" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="59488b0f-3ea2-45e6-b2da-a206f292d58c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eb4fb52d-54db-4edc-ab99-62aea9e26d91" />
+          </association>
+          <association Id="a0dbffa8-f199-4feb-911b-3fbb02ccabdb" isDerived="false" sourceEndRoleName="President" targetEndRoleName="Result of elections" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="540c112e-2a18-4d18-881f-89a588fb760b" LastKnownName="Result of elections" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa5e9b36-80f1-4da7-8c08-4b2eecc83ea6" name="President" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b98812e6-32d6-4c1d-9336-2dd02980ed3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d9a03f5c-e443-42f4-aab3-339b2d33fd1d" name="Result of elections" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="52b0d989-76f6-4524-a3b6-764476f80686" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="38e79e08-67f8-4b42-b0f2-205acfd46260" />
+          </association>
+          <association Id="317227bc-cdb7-4f92-a845-aae3b4942891" isDerived="false" sourceEndRoleName="President" targetEndRoleName="Define treasurer" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b4a018c9-390c-4c81-bdc6-1e4394b53bd8" LastKnownName="Set up treasurer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46121eba-acf8-456d-a7e5-b7f44cefe2dd" name="President" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0dd23611-c312-4548-86a5-2061f68534b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf327c6f-d9d6-4fbb-816e-77f8b99b6449" name="Define treasurer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2f5f6eff-bb5b-467f-af2f-0f403a47ebf9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="501c697a-60c8-41ba-a75e-740cf65fe97f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2faf7385-87f9-47b8-b06f-968ecae030d8" name="Start elections" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3297bece-480b-40d8-81d2-1daf9b55492b" />
+        <additions>
+          <include Id="189a28ff-1488-4215-9c3d-bf9fc585def9">
+            <useCaseMoniker Id="092a4ef3-e1ac-4535-8391-003c6ce1f684" LastKnownName="Initialize vote data" />
+            <elementDefinition Id="3ca7f8f1-53bc-4c78-bf9f-3f8030c64dfc" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8750106f-f1be-4df1-bd6e-ad8c3888668a" name="Set up new president and vocals" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="169cf0b1-c0d2-4a33-a759-a29a6594208b" />
+        <additions>
+          <include Id="48fc16a4-e864-404d-bfa8-e01fc397c959">
+            <useCaseMoniker Id="73e6f257-ad20-4788-a552-b6e7261c2d3f" LastKnownName="Destroy vote data" />
+            <elementDefinition Id="20bdd516-a37c-418a-8714-d7a42241054d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="540c112e-2a18-4d18-881f-89a588fb760b" name="Result of elections" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bdc10c67-e503-4085-b2d7-a1bc5ac30f0a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b4a018c9-390c-4c81-bdc6-1e4394b53bd8" name="Set up treasurer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="540db8b3-b6fc-41bb-99c6-849e378195dd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2d61e44e-7646-4826-b350-8bf92ceb4579" name="Provide information about an event" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f1e0bcd1-fc11-45ba-b382-11cb21bd234b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="c5b910dd-0fc3-438a-bcdf-1ffbeeb39aa1" name="Treasurer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58ab810d-f484-40ee-b9db-d5e237a4e206" />
+        <generalsInternal>
+          <generalization Id="19b15a69-6f37-41ff-b917-0793a91366d7" isSubstitutable="false">
+            <actorMoniker Id="46372a74-3e23-4289-b2b8-1dba3d57924e" LastKnownName="Member" />
+            <elementDefinition Id="11ba1199-48bf-4c28-8102-4ea157093053" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="9b74bb1c-d153-42ec-8197-55fd7faca890" isDerived="false" sourceEndRoleName="Treasurer" targetEndRoleName="Retrieve money data" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8b9d84e8-384a-47e9-ae75-28fc266af625" LastKnownName="Retrieve money data" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="419b2179-25e7-4d98-ba95-d81dbf299012" name="Treasurer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aea87bb2-f7d4-4a6e-aad3-ff73c26396de" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="72b97963-a71f-45fa-aa83-e9a6f019b19c" name="Retrieve money data" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e44507bc-e957-49db-9515-7a7b723ac062" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bfd42693-8568-4aee-a3fd-3db770af5861" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8b9d84e8-384a-47e9-ae75-28fc266af625" name="Retrieve money data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b465602-b347-4173-8a2d-7a95eef2a86a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="edf518f4-4251-4737-a8e9-9a75c61dc256" name="Clock" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="75fea336-aaf7-4dab-b0a8-e0fea2d05b4a" />
+        <targetEnds>
+          <association Id="6b5fe0d8-3076-4042-a600-aacc28ac6e7b" isDerived="false" sourceEndRoleName="Clock" targetEndRoleName="Fees to the bank" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="32e7887a-b8ed-4892-835c-0523cad2899b" LastKnownName="Fees to the bank" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8839481-b242-4cdc-bf66-df6f983102cb" name="Clock" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6769e82a-f1e6-4cde-869f-754c80f31d06" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c20196fc-b546-4dc5-9345-e1d1d80dafae" name="Fees to the bank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="23dfc5df-b994-495c-99c9-e74b05117e3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b0c24229-c3eb-41c3-b37a-6d92dd756164" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="32e7887a-b8ed-4892-835c-0523cad2899b" name="Fees to the bank" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="25325764-1ec7-4f87-8a2d-551e488e82db" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d877d4a7-2661-4abf-b855-ef7674842f9a" name="Define first president" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4de17d0-0f46-42c9-83c7-7f08778f39e4" />
+        <targetEnds>
+          <association Id="5c6512f3-da93-440d-bede-298a3af57367" isDerived="false" sourceEndRoleName="Define first president" targetEndRoleName="Administrator" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="db8b365a-c3d3-4cc0-b875-d8b18cc37ce4" LastKnownName="Administrator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2b5d7fc-9853-45d5-a75e-96e887ce7291" name="Define first president" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="76adf739-d6e3-468b-9566-6dc36a001a42" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29ffb102-0d03-43af-9532-97354bd68780" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1f29bbe3-8254-4b20-83fb-11fde72edc15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a742886-6777-4d7c-83bf-05189a64f211" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="092a4ef3-e1ac-4535-8391-003c6ce1f684" name="Initialize vote data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="32bcef02-1c9c-4505-8fe2-c079e891c12f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="73e6f257-ad20-4788-a552-b6e7261c2d3f" name="Destroy vote data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a7737bd-8869-40e1-bab2-1bf66c949475" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="db8b365a-c3d3-4cc0-b875-d8b18cc37ce4" name="Administrator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c2d5c3b-ba67-4865-af2f-a8ecdd4dd507" />
+        <generalsInternal>
+          <generalization Id="9962578e-6b1c-4b96-a7ba-a0e58b02f210" isSubstitutable="false">
+            <actorMoniker Id="4c560bc0-dc75-41a7-bd90-042f8bd77c44" LastKnownName="Known User" />
+            <elementDefinition Id="c7717b8f-7e56-46d9-a4d1-97415370515c" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="c253538e-00a4-422b-9a1a-081d813487a1" name="BikeClubModel">
+    <elementDefinition Id="c591ffc1-a600-4bff-9cdf-c06d3b87209f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="08854294-5e9c-4453-bc2b-1c8dc1af98a0">
+        <profileInstance Id="270b6934-94ac-434b-88da-403d4ed7d5d9" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="96d5149b-a004-4e44-9bec-ab13951251e7">
+        <profileInstance Id="6e70b62c-5e8b-4d01-a01e-b7253055311d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="570a826e-1ded-4c70-9a35-f90716eb32b9">
+        <profileInstance Id="f53346f7-611e-4616-b029-42c34c3b6d3e" name="CSharpProfile">
+          <elementDefinition Id="1d91f732-2a9b-4c44-9bb2-f9e2cc3cb5b0" />
+        </profileInstance>
+        <elementDefinition Id="c90f7cb7-e3e3-4677-a0a1-d1273ef66ec5" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6b75ec63-5e2e-451c-b9f3-6853994f2024">
+        <profileInstance Id="1f13b7c9-effa-4048-8367-ce59b25d4ccd" name="TextTemplateBindings">
+          <elementDefinition Id="17341766-9c01-4e75-954f-7604bd4c064f" />
+        </profileInstance>
+        <elementDefinition Id="ee603f82-32b2-40ec-8cc2-39a2184d6364" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

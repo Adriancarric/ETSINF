@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="33a27284-015e-436b-b672-7e65c281470c"
+  name="BikeClubLib.Services" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="fc04a3dc-a1d1-4b2f-baa7-f1cf6343011d"
+        name="BikeClubServices"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d9b5d46f-ffa8-4fc7-a252-c15e043f7379">
+            <interfaceMoniker
+              Id="6744e8e5-7297-4e03-be10-920dd8dd6bd8"
+              LastKnownName="IBikeClubServices"
+              LastKnownLocation="Package1_1813.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="4dc8d319-43ce-422c-a0cb-bdb2efca04a2">
+            <interfaceMoniker
+              Id="43025b08-3a47-4bf8-9b5f-2bac5a8d9f2f"
+              LastKnownName="IDAL"
+              LastKnownLocation="Package_1813.uml" />
+          </dependency>
+          <dependency
+            Id="97eb81fa-35e4-4310-95ca-7db17fdab8af">
+            <classMoniker
+              Id="548fffaf-2b55-42d1-ae87-aca13792d1bf"
+              LastKnownName="ServiceException"
+              LastKnownLocation="Package1_1813.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6744e8e5-7297-4e03-be10-920dd8dd6bd8"
+        name="IBikeClubServices"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="548fffaf-2b55-42d1-ae87-aca13792d1bf"
+        name="ServiceException"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

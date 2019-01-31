@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="771e9081-9425-464e-af49-9fd571cb405f" name="Capas lógica y de datos" linkedPackageId="d2b14018-871c-4305-9480-49c75a41627c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="c19a4b87-bf68-4a96-9615-6c4a621a4e19" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="33ab04b3-23d2-4500-acf0-4cc3fefbf0b4" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f9152ddc-2ac4-4e0f-ac90-64f8c477e60f">
+          <propertyInstance Id="70431d55-e066-47a9-8f53-d54439a3010e" name="BaseName">
+            <elementDefinition Id="0f193359-36dc-4a81-b347-4ebb9f68edf3" />
+          </propertyInstance>
+          <elementDefinition Id="46e533e2-793f-4476-8a20-d25eeb49fdb7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f7f30d2a-9944-4ddf-9187-6155f4d84427">
+          <propertyInstance Id="45d5915d-f174-402e-8831-853381e89107" name="ClrAttributes">
+            <elementDefinition Id="3b1c42ae-1016-48ef-804b-cc5d28dfd355" />
+          </propertyInstance>
+          <elementDefinition Id="8831ac17-ea70-46b1-b895-5b847ac87121" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="14de116c-779e-4fd4-be99-8949684941ca">
+          <propertyInstance Id="6e4dc5e0-e8e5-496a-8bbc-1d777afa119c" name="Usings">
+            <elementDefinition Id="623307b6-cbac-4d13-8c8d-57aa90d31b1f" />
+          </propertyInstance>
+          <elementDefinition Id="3756ce37-e7a8-4c3c-874c-2e19de16d614" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="edeb2a46-6fe1-4b19-9444-32aad79c07b0" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="dbada9fd-380d-4d8b-8ba8-ec23f4e18044" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fddceef0-1830-4ce0-b0c6-b90f7fc3f1e2">
+          <propertyInstance Id="df806f7b-16fd-467c-bb26-79032492eaf2" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="b70c23cd-9aa2-4e27-9629-38399892605e" />
+          </propertyInstance>
+          <elementDefinition Id="64803a3a-bd36-4dc3-93ed-afb9f51ac442" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c88882f4-3cd7-4b81-a349-0023234a3acb">
+          <propertyInstance Id="2d7b014a-236d-404e-b60d-82a57d543907" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="f6c78d43-9de1-47b1-b39d-58046c6274b4" />
+          </propertyInstance>
+          <elementDefinition Id="769c3ff7-2039-4bb3-acdf-385272917cc7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e9ebaf46-3b15-4ce8-acd0-a7dff5711418">
+          <propertyInstance Id="742bf135-b7c2-41ff-9c27-26308d0fd6ed" name="ProjectPath" value="ClassTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|EnumTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|InterfaceTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj|StructTemplate=..\BikeClubModelLib\BikeClubModelLib.csproj">
+            <elementDefinition Id="632fade2-3492-44e0-9d81-bff6080e3146" />
+          </propertyInstance>
+          <elementDefinition Id="c79b4766-def1-4358-98a2-3bdd3a2588f4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b5a25316-03ad-4955-aeea-54bf454a12d2">
+          <propertyInstance Id="cdd560c9-08b9-4c40-abc4-f26858d4a4af" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="310f4577-ef46-44b2-9d6f-d0b2b773258f" />
+          </propertyInstance>
+          <elementDefinition Id="12e6f348-13d8-4807-a2de-f698f791a503" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="750e26ab-694f-4707-be64-b34fce1a32cd">
+          <propertyInstance Id="84d837e6-5227-456f-8b8a-ab5dcb9ac21e" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="49832fc0-cdca-411a-895e-bb8555ca8d29" />
+          </propertyInstance>
+          <elementDefinition Id="13ef797c-b5e4-47e5-91f9-a0265c29d7c9" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7fc85255-4139-44f9-9266-acbcaac6af09">
+          <propertyInstance Id="c027b383-50b4-4ded-8c12-3dfb45f9494c" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="a23bcabe-db47-4615-b458-d331aba619e2" />
+          </propertyInstance>
+          <elementDefinition Id="ba07914c-cebc-4283-a4ff-c05615600ee4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b5dd0dd9-7c4c-47ef-ad61-ef8bb346cc91">
+          <propertyInstance Id="e3b0f32a-a637-42b0-8250-5dd446f835e2" name="Parameters">
+            <elementDefinition Id="c0d7bd99-6081-4f06-968a-29f19738b3fb" />
+          </propertyInstance>
+          <elementDefinition Id="899387de-a225-42c3-85dd-a537bb5b349c" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="84b7cad9-cd81-4d55-9fd4-c641decb06fe" name="DBTest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6f47b89c-4a8b-409f-b740-375ae080a797" />
+        <suppliersInternal>
+          <dependency Id="73982a63-cc30-4306-8139-410b193f05c5">
+            <interfaceMoniker Id="c937f29e-d52c-4191-84c2-ff528af41264" LastKnownName="IDAL" />
+            <elementDefinition Id="f731d53e-03cb-4134-9b77-161edcee6a46" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="95add6e9-8d55-4a06-97f1-ae9af937c097" name="BusinessLogicTest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2f8d1c1a-3b20-4ef1-a4ff-879c1bc078dc" />
+        <suppliersInternal>
+          <dependency Id="3732193b-e9ca-472f-a548-414999d9a7f7">
+            <interfaceMoniker Id="bf4fd017-3511-40d1-a62d-621c1b90d497" LastKnownName="IBikeClubServices" />
+            <elementDefinition Id="985be372-a0a0-4105-b63e-4ad669aa65e5" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4aa19bba-977e-4bde-a85a-89dcd970d5ff" name="DbContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="88e0d2ac-cf39-4941-98e2-29a0a93e815c" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="bd9b081b-c222-41b5-8326-b987c3d34b1b" name="BikeClubLib.Persistence">
+        <elementDefinition Id="ea704d57-0b93-43b7-8f49-17955d81e706" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="e4c91647-7635-47d1-be3f-872e7a0c3f21" name="EntityFrameworkDAL" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6596ef91-533c-48e5-9e43-fa1f48b2e011" />
+              <suppliersInternal>
+                <interfaceRealization Id="f3b923dc-5f44-4aad-b072-8bada2bbf3dd">
+                  <interfaceMoniker Id="c937f29e-d52c-4191-84c2-ff528af41264" LastKnownName="IDAL" />
+                  <elementDefinition Id="8870632c-24d2-4086-aa7d-4efcd884e81e" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="7542f81a-b4fd-48ac-98bc-99d94025da41" isDerived="false" sourceEndRoleName="" targetEndRoleName="dbContext" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="7e6a2744-0c11-479e-934a-7878b3abd9d8" LastKnownName="BikeClubDbContext" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a0a94e5f-e785-49fe-9379-c3f9c50620ad" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="2c85ed60-3bbf-4a18-8e8d-16a4cea58196" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a63d7d15-cd5a-412b-b8ba-4fb35acf0636" name="dbContext" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="b8474291-beab-428f-8a2c-39154e3a03fe" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="663f7352-bdfb-4a81-849c-5f9ce3e813e9" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7e6a2744-0c11-479e-934a-7878b3abd9d8" name="BikeClubDbContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5c4a7291-ed12-4c59-b0b3-2582bf91ed29" />
+              <generalsInternal>
+                <generalization Id="ea443df3-4c3d-48b3-86c1-7eff6c650a24" isSubstitutable="false">
+                  <classMoniker Id="4aa19bba-977e-4bde-a85a-89dcd970d5ff" LastKnownName="DbContext" />
+                  <elementDefinition Id="100d584b-cce6-41e9-919a-6856d2a8f4b5" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="c937f29e-d52c-4191-84c2-ff528af41264" name="IDAL" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="43025b08-3a47-4bf8-9b5f-2bac5a8d9f2f" />
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="06e82ea6-8a33-42bd-9b6b-fe1ce51df819" name="BikeClubLib.Services">
+        <elementDefinition Id="33a27284-015e-436b-b672-7e65c281470c" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="d1d4a8de-53f9-4d38-abdb-19203df63e25" name="BikeClubServices" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="fc04a3dc-a1d1-4b2f-baa7-f1cf6343011d" />
+              <suppliersInternal>
+                <interfaceRealization Id="b07c254c-5db6-4759-b674-0a0db6befc30">
+                  <interfaceMoniker Id="bf4fd017-3511-40d1-a62d-621c1b90d497" LastKnownName="IBikeClubServices" />
+                  <elementDefinition Id="d9b5d46f-ffa8-4fc7-a252-c15e043f7379" />
+                </interfaceRealization>
+                <dependency Id="63a8cd88-525f-4a92-ab71-4ecdbb9f5468">
+                  <interfaceMoniker Id="c937f29e-d52c-4191-84c2-ff528af41264" LastKnownName="IDAL" />
+                  <elementDefinition Id="4dc8d319-43ce-422c-a0cb-bdb2efca04a2" />
+                </dependency>
+                <dependency Id="1948570d-3124-46ce-bb8b-c8512fd2ae77">
+                  <classMoniker Id="0d92d0f6-d521-4397-9a7d-c9eb8c2ad6ec" LastKnownName="ServiceException" />
+                  <elementDefinition Id="97eb81fa-35e4-4310-95ca-7db17fdab8af" />
+                </dependency>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="bf4fd017-3511-40d1-a62d-621c1b90d497" name="IBikeClubServices" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="6744e8e5-7297-4e03-be10-920dd8dd6bd8" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0d92d0f6-d521-4397-9a7d-c9eb8c2ad6ec" name="ServiceException" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="548fffaf-2b55-42d1-ae87-aca13792d1bf" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="d2b14018-871c-4305-9480-49c75a41627c" name="BikeClubModel">
+    <elementDefinition Id="c591ffc1-a600-4bff-9cdf-c06d3b87209f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c3db0584-8b42-45c9-8233-d2e3463002c9">
+        <profileInstance Id="0c391d9d-58f8-4f9f-bc36-a0da0604b3b3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3a266523-e057-4149-9d81-e7120cacd7a0">
+        <profileInstance Id="4caa060b-9f98-4fb4-a794-0d9bf29339ce" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7bb12a46-7c8f-4b61-b570-289d3aa1a6be">
+        <profileInstance Id="f106520c-4899-49d8-a004-5e34bbe024df" name="CSharpProfile">
+          <elementDefinition Id="1d91f732-2a9b-4c44-9bb2-f9e2cc3cb5b0" />
+        </profileInstance>
+        <elementDefinition Id="c90f7cb7-e3e3-4677-a0a1-d1273ef66ec5" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4df078f2-0b96-4df1-9323-e99a52940015">
+        <profileInstance Id="961b7491-a1de-433c-b73b-f0051611cbef" name="TextTemplateBindings">
+          <elementDefinition Id="17341766-9c01-4e75-954f-7604bd4c064f" />
+        </profileInstance>
+        <elementDefinition Id="ee603f82-32b2-40ec-8cc2-39a2184d6364" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
