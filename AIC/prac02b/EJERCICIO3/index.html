@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<title>Inicio:suma.s. Ciclo 0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+html, body {
+    font-family:"Tahoma", Times, serif;
+    font-size:10pt;
+    line-height:100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Barra de navegacion CSS -->
+<div>
+<ul class="w3-navbar w3-top w3-light-grey">
+<li><a class="w3-hover-grey" href="index.html">INICIO</a>
+<li><a class="w3-hover-grey" href="final.html">FINAL</a>
+<li><a class="w3-hover-grey" href="result001.html">Estado</a>
+</ul>
+</div>
+<br>
+<br><br>
+<div class="w3-row w3-container">
+<!-- Configuración -->
+<table>
+<tr>
+  <td colspan="2" bgcolor="#ccddff" align="center">Configuración</td>
+</tr>
+<tr>
+  <td bgcolor="#ccddff" align="center">Parámetro</td>
+  <td bgcolor="#ddeeff" align="center">Valor</td>
+</tr>
+<tr>
+  <td bgcolor="#eeeeee">Programa</td>
+  <td bgcolor="#dddddd" align="center">suma.s</td>
+</tr>
+<tr>
+  <td bgcolor="#eeeeee">Riesgos de datos</td>
+  <td bgcolor="#dddddd" align="center">Stalls</td>
+</tr>
+<tr>
+  <td bgcolor="#eeeeee">Riesgos de control&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd" align="center">Predict-not-taken</td>
+</tr>
+
+<tr>
+  <td bgcolor="#eeeeee">Registros</td>
+  <td bgcolor="#dddddd" align="center">32</td>
+</tr>
+
+</table>
+
+<br>
+</div>
+
+<div class="w3-row ">
+<div class="w3-col w3-container w3-quarter ">
+<!-- Mem Datos en columna -->
+<table>
+<tr bgcolor="#ccddff">
+  <td align="center" colspan=2>Memoria de Datos</td>
+</tr>
+<tr>
+  <td width=75 bgcolor="#ccddff" align="center">Dirección</td>
+  <td width=75 bgcolor="#ddeeff" align="center">Valor</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">a&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">0</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">y&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">1</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">16&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">2</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">24&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">3</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">32&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">0</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">40&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">4</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">48&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">5</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">56&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">6</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">64&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">7</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">72&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#dddddd" align="right">8</td>
+</tr>
+</table>
+
+</div>
+<div class="w3-col w3-container w3-quarter ">
+<!-- Mem Instr en columna -->
+<table>
+<tr bgcolor="#ccddff">
+  <td align="center" colspan=2>Memoria de Instrucciones</td>
+</tr>
+<tr>
+  <td width=75 bgcolor="#ccddff" align="center">Dirección</td>
+  <td width=200 bgcolor="#ddeeff" align="center">Instrucciones</td>
+</tr>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">0&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">dadd r1,r0,r0</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">1&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">dadd r3,r3,r0</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">2&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">dadd r2,r0,#8</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">bucle:3&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">dadd r1,r3,r1</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">4&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">ld r3,0(r2)</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">5&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">dadd r2,r2,#8</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">6&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">bnez r3,-4</td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#eeeeee">7&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td bgcolor="#dddddd">sd r1,0(r0)</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br>
+
+<!-- Final -->
+<div class="w3-row w3-container w3-light-grey">
+<address>
+Arquitectura e Ingeniería de Computadores<br>
+Departamento de Informática de Sistemas y Computadores (DISCA)<br>
+Universitat Politècnica de València<br>
+</address>
+</div>
+
+</body>
+</html>

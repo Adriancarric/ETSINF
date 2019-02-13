@@ -1,0 +1,4 @@
+/* stdin */
+void inicializa_prediccion(void);
+boolean obtener_prediccion(dword PC, ciclo_t orden, boolean *prediccion, dword *destino);
+void actualizar_prediccion(dword PC, ciclo_t orden, boolean condicion, dword destino);

@@ -1,0 +1,1627 @@
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -p pnt
+                                                                                                                                     
+*** CONFIGURACIÓN ***                                                                                                                
+                                                                                                                                     
+  Grado superescalar:                                                                                                                
+        ISSUE:        1                                                                                                              
+        BUSES:        1                                                                                                              
+        COMMIT:       1                                                                                                              
+  Reorder Buffer:     128                                                                                                            
+  E.R. Suma/Resta:    16                                                                                                             
+  E.R. Mult/Div:      16                                                                                                             
+  E.R. Enteros:       16                                                                                                             
+  Buffer lectura:     16                                                                                                             
+  Buffer escritura:   16                                                                                                             
+  Tipo predictor:     Predict-Not-Taken                                                                                              
+  Buffer predictor:   2                                                                                                              
+  Registros:          32                                                                                                             
+                                                                                                                                     
+                    Cantidad   Latencia  Tipo                                                                                        
+                    --------   --------  ----                                                                                        
+  Oper. Suma/Resta:    8           4     CONV                                                                                        
+  Oper. Mult/Div:      8           7     CONV                                                                                        
+  Oper. Enteros:       8           1     CONV                                                                                        
+  Oper. Memoria:       8           2     CONV                                                                                        
+                                                                                                                                     
+                                                                                                                                     
+ATENCION: Numero de ciclos (1000) excesivo                                                                                           
+          No se generan más ciclos para visualizar                                                                                   
+                                                                                                                                     
+Ciclo 1670: El programa está terminando normalmente                                                                                  
+                                                                                                                                     
+*** ESTADISTICAS ***                                                                                                                 
+                                                                                                                                     
+Ciclos:              1670                                                                                                            
+Instrucciones:        646                                                                                                            
+  Operaciones C.F.:   128                                                                                                            
+  Saltos:                                                                                                                            
+    Accedidos:         64                                                                                                            
+    Encontrados:        0                                                                                                            
+    Ejecutados:        64                                                                                                            
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    2 / 16   ( 12% -   2%)
+  RS S/R C.F.:   1 / 16   (  6% -   3%)
+  RS M/D C.F.:   1 / 16   (  6% -   2%)
+  RS Carga:      3 / 16   ( 18% -   1%)
+  RS Almac.:     1 / 16   (  6% -   4%)
+  Op Enteros:    1 /  8   ( 12% -   2%)
+  Op S/R C.F.:   1 /  8   ( 12% -   1%)
+  Op M/D C.F.:   1 /  8   ( 12% -   3%)
+  Op Mem (AC):   1 /  8   ( 12% -   1%)
+  Op Mem:        2 /  8   ( 25% -   2%)
+  RB:            9 /128   (  7% -   4%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -p 1 
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     1 bit
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 680: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               680
+Instrucciones:        646
+  Operaciones C.F.:   129
+  Saltos:
+    Accedidos:         65
+    Encontrados:       64
+    Ejecutados:        64
+    Acertados:         62
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 / 16   ( 18% -   9%)
+  RS S/R C.F.:   2 / 16   ( 12% -   8%)
+  RS M/D C.F.:   1 / 16   (  6% -   5%)
+  RS Carga:      3 / 16   ( 18% -   4%)
+  RS Almac.:     2 / 16   ( 12% -  10%)
+  Op Enteros:    1 /  8   ( 12% -   6%)
+  Op S/R C.F.:   1 /  8   ( 12% -   4%)
+  Op M/D C.F.:   1 /  8   ( 12% -   8%)
+  Op Mem (AC):   1 /  8   ( 12% -   3%)
+  Op Mem:        2 /  8   ( 25% -   7%)
+  RB:           15 /128   ( 11% -  11%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -p p
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1670: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1670
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    2 / 16   ( 12% -   2%)
+  RS S/R C.F.:   1 / 16   (  6% -   3%)
+  RS M/D C.F.:   1 / 16   (  6% -   2%)
+  RS Carga:      3 / 16   ( 18% -   1%)
+  RS Almac.:     1 / 16   (  6% -   4%)
+  Op Enteros:    1 /  8   ( 12% -   2%)
+  Op S/R C.F.:   1 /  8   ( 12% -   1%)
+  Op M/D C.F.:   1 /  8   ( 12% -   3%)
+  Op Mem (AC):   1 /  8   ( 12% -   1%)
+  Op Mem:        2 /  8   ( 25% -   2%)
+  RB:            9 /128   (  7% -   4%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 662: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               662
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:       64
+    Ejecutados:        64
+    Acertados:         64
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 / 16   ( 18% -   9%)
+  RS S/R C.F.:   2 / 16   ( 12% -   8%)
+  RS M/D C.F.:   1 / 16   (  6% -   6%)
+  RS Carga:      3 / 16   ( 18% -   4%)
+  RS Almac.:     2 / 16   ( 12% -  10%)
+  Op Enteros:    1 /  8   ( 12% -   6%)
+  Op S/R C.F.:   1 /  8   ( 12% -   4%)
+  Op M/D C.F.:   1 /  8   ( 12% -   8%)
+  Op Mem (AC):   1 /  8   ( 12% -   3%)
+  Op Mem:        2 /  8   ( 25% -   7%)
+  RB:           15 /128   ( 11% -  11%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 2:2:2 -p pnt
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        2
+        BUSES:        2
+        COMMIT:       2
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Predict-Not-Taken
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1474: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1474
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    4 / 16   ( 25% -   3%)
+  RS S/R C.F.:   1 / 16   (  6% -   4%)
+  RS M/D C.F.:   1 / 16   (  6% -   2%)
+  RS Carga:      3 / 16   ( 18% -   2%)
+  RS Almac.:     1 / 16   (  6% -   5%)
+  Op Enteros:    2 /  8   ( 25% -   2%)
+  Op S/R C.F.:   1 /  8   ( 12% -   2%)
+  Op M/D C.F.:   1 /  8   ( 12% -   3%)
+  Op Mem (AC):   2 /  8   ( 25% -   1%)
+  Op Mem:        3 /  8   ( 37% -   3%)
+  RB:           10 /128   (  7% -   5%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 2:2:2 -p 1
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        2
+        BUSES:        2
+        COMMIT:       2
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     1 bit
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 423: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               423
+Instrucciones:        646
+  Operaciones C.F.:   129
+  Saltos:
+    Accedidos:         66
+    Encontrados:       65
+    Ejecutados:        64
+    Acertados:         62
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    5 / 16   ( 31% -  18%)
+  RS S/R C.F.:   3 / 16   ( 18% -  14%)
+  RS M/D C.F.:   2 / 16   ( 12% -  10%)
+  RS Carga:      3 / 16   ( 18% -   7%)
+  RS Almac.:     4 / 16   ( 25% -  18%)
+  Op Enteros:    2 /  8   ( 25% -   9%)
+  Op S/R C.F.:   1 /  8   ( 12% -   7%)
+  Op M/D C.F.:   2 /  8   ( 25% -  13%)
+  Op Mem (AC):   2 /  8   ( 25% -   5%)
+  Op Mem:        3 /  8   ( 37% -  11%)
+  RB:           27 /128   ( 21% -  18%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 2:2:2 -p p
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1474: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1474
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    4 / 16   ( 25% -   3%)
+  RS S/R C.F.:   1 / 16   (  6% -   4%)
+  RS M/D C.F.:   1 / 16   (  6% -   2%)
+  RS Carga:      3 / 16   ( 18% -   2%)
+  RS Almac.:     1 / 16   (  6% -   5%)
+  Op Enteros:    2 /  8   ( 25% -   2%)
+  Op S/R C.F.:   1 /  8   ( 12% -   2%)
+  Op M/D C.F.:   1 /  8   ( 12% -   3%)
+  Op Mem (AC):   2 /  8   ( 25% -   1%)
+  Op Mem:        3 /  8   ( 37% -   3%)
+  RB:           10 /128   (  7% -   5%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        2
+        BUSES:        2
+        COMMIT:       2
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 403: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               403
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:       64
+    Ejecutados:        64
+    Acertados:         64
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    5 / 16   ( 31% -  18%)
+  RS S/R C.F.:   3 / 16   ( 18% -  14%)
+  RS M/D C.F.:   2 / 16   ( 12% -  10%)
+  RS Carga:      3 / 16   ( 18% -   8%)
+  RS Almac.:     4 / 16   ( 25% -  18%)
+  Op Enteros:    2 /  8   ( 25% -  10%)
+  Op S/R C.F.:   1 /  8   ( 12% -   7%)
+  Op M/D C.F.:   2 /  8   ( 25% -  13%)
+  Op Mem (AC):   2 /  8   ( 25% -   5%)
+  Op Mem:        3 /  8   ( 37% -  11%)
+  RB:           28 /128   ( 21% -  19%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 4:4:4 -p pnt   
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Predict-Not-Taken
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1346: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1347
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    6 / 16   ( 37% -   4%)
+  RS S/R C.F.:   1 / 16   (  6% -   4%)
+  RS M/D C.F.:   1 / 16   (  6% -   3%)
+  RS Carga:      3 / 16   ( 18% -   2%)
+  RS Almac.:     1 / 16   (  6% -   5%)
+  Op Enteros:    3 /  8   ( 37% -   3%)
+  Op S/R C.F.:   1 /  8   ( 12% -   2%)
+  Op M/D C.F.:   1 /  8   ( 12% -   4%)
+  Op Mem (AC):   3 /  8   ( 37% -   1%)
+  Op Mem:        3 /  8   ( 37% -   3%)
+  RB:           13 /128   ( 10% -   5%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 4:4:4 -p 1
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     1 bit
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 233: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               233
+Instrucciones:        646
+  Operaciones C.F.:   130
+  Saltos:
+    Accedidos:         67
+    Encontrados:       66
+    Ejecutados:        64
+    Acertados:         62
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    6 / 16   ( 37% -  25%)
+  RS S/R C.F.:   6 / 16   ( 37% -  28%)
+  RS M/D C.F.:   4 / 16   ( 25% -  21%)
+  RS Carga:      4 / 16   ( 25% -  14%)
+  RS Almac.:     7 / 16   ( 43% -  35%)
+  Op Enteros:    3 /  8   ( 37% -  17%)
+  Op S/R C.F.:   2 /  8   ( 25% -  13%)
+  Op M/D C.F.:   3 /  8   ( 37% -  24%)
+  Op Mem (AC):   3 /  8   ( 37% -  10%)
+  Op Mem:        3 /  8   ( 37% -  21%)
+  RB:           57 /128   ( 44% -  37%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 4:4:4 -p p
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1346: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1347
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    6 / 16   ( 37% -   4%)
+  RS S/R C.F.:   1 / 16   (  6% -   4%)
+  RS M/D C.F.:   1 / 16   (  6% -   3%)
+  RS Carga:      3 / 16   ( 18% -   2%)
+  RS Almac.:     1 / 16   (  6% -   5%)
+  Op Enteros:    3 /  8   ( 37% -   3%)
+  Op S/R C.F.:   1 /  8   ( 12% -   2%)
+  Op M/D C.F.:   1 /  8   ( 12% -   4%)
+  Op Mem (AC):   3 /  8   ( 37% -   1%)
+  Op Mem:        3 /  8   ( 37% -   3%)
+  RB:           13 /128   ( 10% -   5%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 211: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               212
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:       64
+    Ejecutados:        64
+    Acertados:         64
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    6 / 16   ( 37% -  26%)
+  RS S/R C.F.:   6 / 16   ( 37% -  30%)
+  RS M/D C.F.:   5 / 16   ( 31% -  22%)
+  RS Carga:      5 / 16   ( 31% -  15%)
+  RS Almac.:     7 / 16   ( 43% -  37%)
+  Op Enteros:    3 /  8   ( 37% -  19%)
+  Op S/R C.F.:   2 /  8   ( 25% -  15%)
+  Op M/D C.F.:   3 /  8   ( 37% -  26%)
+  Op Mem (AC):   3 /  8   ( 37% -  11%)
+  Op Mem:        3 /  8   ( 37% -  22%)
+  RB:           60 /128   ( 46% -  39%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 8:8:8 -p pnt    
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        8
+        BUSES:        8
+        COMMIT:       8
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Predict-Not-Taken
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1282: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1284
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    9 / 16   ( 56% -   5%)
+  RS S/R C.F.:   1 / 16   (  6% -   4%)
+  RS M/D C.F.:   1 / 16   (  6% -   3%)
+  RS Carga:      3 / 16   ( 18% -   2%)
+  RS Almac.:     1 / 16   (  6% -   6%)
+  Op Enteros:    4 /  8   ( 50% -   3%)
+  Op S/R C.F.:   1 /  8   ( 12% -   2%)
+  Op M/D C.F.:   1 /  8   ( 12% -   4%)
+  Op Mem (AC):   3 /  8   ( 37% -   1%)
+  Op Mem:        2 /  8   ( 25% -   3%)
+  RB:           16 /128   ( 12% -   6%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 8:8:8 -p 1
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        8
+        BUSES:        8
+        COMMIT:       8
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     1 bit
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 170: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               170
+Instrucciones:        646
+  Operaciones C.F.:   131
+  Saltos:
+    Accedidos:         68
+    Encontrados:       67
+    Ejecutados:        64
+    Acertados:         62
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    9 / 16   ( 56% -  42%)
+  RS S/R C.F.:   9 / 16   ( 56% -  41%)
+  RS M/D C.F.:   7 / 16   ( 43% -  32%)
+  RS Carga:      6 / 16   ( 37% -  24%)
+  RS Almac.:    11 / 16   ( 68% -  50%)
+  Op Enteros:    5 /  8   ( 62% -  24%)
+  Op S/R C.F.:   2 /  8   ( 25% -  19%)
+  Op M/D C.F.:   4 /  8   ( 50% -  34%)
+  Op Mem (AC):   3 /  8   ( 37% -  14%)
+  Op Mem:        3 /  8   ( 37% -  29%)
+  RB:           90 /128   ( 70% -  54%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16 -m 8:7:c:16 -l 8:2:c:16:16 -f daxpy64.s -r 128 -v 8:8:8 -p p
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1282: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1284
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:        0
+    Ejecutados:        64
+    Acertados:          1
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    9 / 16   ( 56% -   5%)
+  RS S/R C.F.:   1 / 16   (  6% -   4%)
+  RS M/D C.F.:   1 / 16   (  6% -   3%)
+  RS Carga:      3 / 16   ( 18% -   2%)
+  RS Almac.:     1 / 16   (  6% -   6%)
+  Op Enteros:    4 /  8   ( 50% -   3%)
+  Op S/R C.F.:   1 /  8   ( 12% -   2%)
+  Op M/D C.F.:   1 /  8   ( 12% -   4%)
+  Op Mem (AC):   3 /  8   ( 37% -   1%)
+  Op Mem:        2 /  8   ( 25% -   3%)
+  RB:           16 /128   ( 12% -   6%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        8
+        BUSES:        8
+        COMMIT:       8
+  Reorder Buffer:     128
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      16
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      8           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 148: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               150
+Instrucciones:        646
+  Operaciones C.F.:   128
+  Saltos:
+    Accedidos:         64
+    Encontrados:       64
+    Ejecutados:        64
+    Acertados:         64
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:   13 / 16   ( 81% -  56%)
+  RS S/R C.F.:   9 / 16   ( 56% -  48%)
+  RS M/D C.F.:   7 / 16   ( 43% -  37%)
+  RS Carga:      6 / 16   ( 37% -  32%)
+  RS Almac.:    11 / 16   ( 68% -  58%)
+  Op Enteros:    5 /  8   ( 62% -  27%)
+  Op S/R C.F.:   2 /  8   ( 25% -  21%)
+  Op M/D C.F.:   4 /  8   ( 50% -  37%)
+  Op Mem (AC):   3 /  8   ( 37% -  16%)
+  Op Mem:        3 /  8   ( 37% -  32%)
+  RB:           98 /128   ( 76% -  63%)
+  
+  adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 8:1:c:16 -a 8:4:c:16  -l 8:2:c:16:16 -f ordena-fp.s -r 64 -v 4:4:4 -p p                    
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 4823: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              4823
+Instrucciones:       2274
+  Operaciones C.F.:   552
+  Saltos:
+    Accedidos:       1032
+    Encontrados:        0
+    Ejecutados:       575
+    Acertados:        198
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    7 / 16   ( 43% -  10%)
+  RS S/R C.F.:   2 / 16   ( 12% -   6%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 / 16   ( 12% -   1%)
+  RS Almac.:     2 / 16   ( 12% -   9%)
+  Op Enteros:    2 /  8   ( 25% -   5%)
+  Op S/R C.F.:   2 /  8   ( 25% -   5%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  8   ( 25% -   2%)
+  Op Mem:        2 /  8   ( 25% -   3%)
+  RB:           15 / 64   ( 23% -  11%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     64
+  E.R. Suma/Resta:    16
+  E.R. Mult/Div:      2
+  E.R. Enteros:       16
+  Buffer lectura:     16
+  Buffer escritura:   16
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    8           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       8           1     CONV
+  Oper. Memoria:       8           2     CONV
+
+Ciclo 892: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               892
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:        828
+    Encontrados:      575
+    Ejecutados:       575
+    Acertados:        575
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:   10 / 16   ( 62% -  41%)
+  RS S/R C.F.:  11 / 16   ( 68% -  34%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      6 / 16   ( 37% -  11%)
+  RS Almac.:    12 / 16   ( 75% -  42%)
+  Op Enteros:    5 /  8   ( 62% -  16%)
+  Op S/R C.F.:   4 /  8   ( 50% -  25%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   3 /  8   ( 37% -   9%)
+  Op Mem:        3 /  8   ( 37% -  18%)
+  RB:           62 / 64   ( 96% -  53%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 5:1:c:10 -a 4:4:c:11  -l 3:2:c:6:12 -f ordena-fp.s -r 64 -v 4:4:4 -p p        
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 4823: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              4823
+Instrucciones:       2274
+  Operaciones C.F.:   552
+  Saltos:
+    Accedidos:       1032
+    Encontrados:        0
+    Ejecutados:       575
+    Acertados:        198
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    7 / 10   ( 70% -  16%)
+  RS S/R C.F.:   2 / 11   ( 18% -   9%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -   4%)
+  RS Almac.:     2 / 12   ( 16% -  12%)
+  Op Enteros:    2 /  5   ( 40% -   8%)
+  Op S/R C.F.:   2 /  4   ( 50% -  11%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   5%)
+  Op Mem:        2 /  3   ( 66% -   8%)
+  RB:           15 / 64   ( 23% -  11%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     64
+  E.R. Suma/Resta:    11
+  E.R. Mult/Div:      2
+  E.R. Enteros:       10
+  Buffer lectura:     6
+  Buffer escritura:   12
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    4           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       5           1     CONV
+  Oper. Memoria:       3           2     CONV
+
+Ciclo 892: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               892
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:        828
+    Encontrados:      575
+    Ejecutados:       575
+    Acertados:        575
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:   10 / 10   (100% -  66%)
+  RS S/R C.F.:  11 / 11   (100% -  49%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      6 /  6   (100% -  30%)
+  RS Almac.:    12 / 12   (100% -  56%)
+  Op Enteros:    5 /  5   (100% -  26%)
+  Op S/R C.F.:   4 /  4   (100% -  50%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   3 /  3   (100% -  24%)
+  Op Mem:        3 /  3   (100% -  48%)
+  RB:           62 / 64   ( 96% -  53%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 5:1:c:10 -a 4:4:c:11  -l 3:2:c:6:12 -f ordena-fp.s -r 32 -v 4:4:4 -p p    
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 4823: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              4823
+Instrucciones:       2274
+  Operaciones C.F.:   552
+  Saltos:
+    Accedidos:       1032
+    Encontrados:        0
+    Ejecutados:       575
+    Acertados:        198
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    7 / 10   ( 70% -  16%)
+  RS S/R C.F.:   2 / 11   ( 18% -   9%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -   4%)
+  RS Almac.:     2 / 12   ( 16% -  12%)
+  Op Enteros:    2 /  5   ( 40% -   8%)
+  Op S/R C.F.:   2 /  4   ( 50% -  11%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   5%)
+  Op Mem:        2 /  3   ( 66% -   8%)
+  RB:           15 / 32   ( 46% -  22%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     32
+  E.R. Suma/Resta:    11
+  E.R. Mult/Div:      2
+  E.R. Enteros:       10
+  Buffer lectura:     6
+  Buffer escritura:   12
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    4           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       5           1     CONV
+  Oper. Memoria:       3           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1016: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1016
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:        828
+    Encontrados:      575
+    Ejecutados:       575
+    Acertados:        575
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    9 / 10   ( 90% -  55%)
+  RS S/R C.F.:   8 / 11   ( 72% -  40%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      4 /  6   ( 66% -  24%)
+  RS Almac.:    10 / 12   ( 83% -  46%)
+  Op Enteros:    5 /  5   (100% -  23%)
+  Op S/R C.F.:   4 /  4   (100% -  44%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   3 /  3   (100% -  21%)
+  Op Mem:        3 /  3   (100% -  42%)
+  RB:           32 / 32   (100% -  86%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 5:1:c:10 -a 4:4:c:11  -l 3:2:c:6:12 -f ordena-fp.s -r 16 -v 4:4:4 -p p  
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 4823: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              4823
+Instrucciones:       2274
+  Operaciones C.F.:   552
+  Saltos:
+    Accedidos:       1032
+    Encontrados:        0
+    Ejecutados:       575
+    Acertados:        198
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    7 / 10   ( 70% -  16%)
+  RS S/R C.F.:   2 / 11   ( 18% -   9%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -   4%)
+  RS Almac.:     2 / 12   ( 16% -  12%)
+  Op Enteros:    2 /  5   ( 40% -   8%)
+  Op S/R C.F.:   2 /  4   ( 50% -  11%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   5%)
+  Op Mem:        2 /  3   ( 66% -   8%)
+  RB:           15 / 16   ( 93% -  45%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     16
+  E.R. Suma/Resta:    11
+  E.R. Mult/Div:      2
+  E.R. Enteros:       10
+  Buffer lectura:     6
+  Buffer escritura:   12
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    4           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       5           1     CONV
+  Oper. Memoria:       3           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1468: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1468
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:        840
+    Encontrados:      575
+    Ejecutados:       575
+    Acertados:        575
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    6 / 10   ( 60% -  34%)
+  RS S/R C.F.:   4 / 11   ( 36% -  22%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      3 /  6   ( 50% -  16%)
+  RS Almac.:     6 / 12   ( 50% -  26%)
+  Op Enteros:    3 /  5   ( 60% -  16%)
+  Op S/R C.F.:   3 /  4   ( 75% -  30%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   3 /  3   (100% -  14%)
+  Op Mem:        3 /  3   (100% -  29%)
+  RB:           16 / 16   (100% -  93%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 5:1:c:10 -a 4:4:c:11  -l 3:2:c:6:12 -f ordena-fp.s -r 8 -v 4:4:4 -p p  
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 4823: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              4823
+Instrucciones:       2274
+  Operaciones C.F.:   552
+  Saltos:
+    Accedidos:       1032
+    Encontrados:        0
+    Ejecutados:       575
+    Acertados:        198
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    5 / 10   ( 50% -  14%)
+  RS S/R C.F.:   2 / 11   ( 18% -   8%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -   4%)
+  RS Almac.:     2 / 12   ( 16% -  12%)
+  Op Enteros:    2 /  5   ( 40% -   8%)
+  Op S/R C.F.:   2 /  4   ( 50% -  11%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   5%)
+  Op Mem:        2 /  3   ( 66% -   8%)
+  RB:            8 /  8   (100% -  73%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     8
+  E.R. Suma/Resta:    11
+  E.R. Mult/Div:      2
+  E.R. Enteros:       10
+  Buffer lectura:     6
+  Buffer escritura:   12
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    4           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       5           1     CONV
+  Oper. Memoria:       3           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 2214: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              2214
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:        828
+    Encontrados:      575
+    Ejecutados:       575
+    Acertados:        575
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    5 / 10   ( 50% -  19%)
+  RS S/R C.F.:   2 / 11   ( 18% -  11%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -  10%)
+  RS Almac.:     4 / 12   ( 33% -  13%)
+  Op Enteros:    3 /  5   ( 60% -  10%)
+  Op S/R C.F.:   2 /  4   ( 50% -  20%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   9%)
+  Op Mem:        3 /  3   (100% -  19%)
+  RB:            8 /  8   (100% -  90%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -e 5:1:c:10 -a 4:4:c:11  -l 3:2:c:6:12 -f ordena-fp.s -r 4 -v 4:4:4 -p p 
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 5543: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              5543
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:       1032
+    Encontrados:        0
+    Ejecutados:       575
+    Acertados:        198
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    4 / 10   ( 40% -  11%)
+  RS S/R C.F.:   1 / 11   (  9% -   5%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -   3%)
+  RS Almac.:     2 / 12   ( 16% -   7%)
+  Op Enteros:    2 /  5   ( 40% -   5%)
+  Op S/R C.F.:   1 /  4   ( 25% -   8%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   5%)
+  Op Mem:        2 /  3   ( 66% -   7%)
+  RB:            4 /  4   (100% -  83%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        4
+        BUSES:        4
+        COMMIT:       4
+  Reorder Buffer:     4
+  E.R. Suma/Resta:    11
+  E.R. Mult/Div:      2
+  E.R. Enteros:       10
+  Buffer lectura:     6
+  Buffer escritura:   12
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    4           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       5           1     CONV
+  Oper. Memoria:       3           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 3600: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              3600
+Instrucciones:       2274
+  Operaciones C.F.:   450
+  Saltos:
+    Accedidos:        828
+    Encontrados:      575
+    Ejecutados:       575
+    Acertados:        575
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 / 10   ( 30% -  12%)
+  RS S/R C.F.:   1 / 11   (  9% -   7%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  6   ( 33% -   6%)
+  RS Almac.:     2 / 12   ( 16% -   8%)
+  Op Enteros:    2 /  5   ( 40% -   6%)
+  Op S/R C.F.:   1 /  4   ( 25% -  12%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   2 /  3   ( 66% -   5%)
+  Op Mem:        2 /  3   ( 66% -  11%)
+  RB:            4 /  4   (100% -  97%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -f suma-mat.s -p pnt
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     20
+  E.R. Suma/Resta:    3
+  E.R. Mult/Div:      2
+  E.R. Enteros:       5
+  Buffer lectura:     3
+  Buffer escritura:   3
+  Tipo predictor:     Predict-Not-Taken
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    1           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       1           1     CONV
+  Oper. Memoria:       1           2     CONV
+
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1186: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1186
+Instrucciones:        482
+  Operaciones C.F.:    64
+  Saltos:
+    Accedidos:        128
+    Encontrados:        0
+    Ejecutados:        72
+    Acertados:          9
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 /  5   ( 60% -  17%)
+  RS S/R C.F.:   1 /  3   ( 33% -  16%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  3   ( 66% -  16%)
+  RS Almac.:     1 /  3   ( 33% -  23%)
+  Op Enteros:    1 /  1   (100% -  28%)
+  Op S/R C.F.:   1 /  1   (100% -  21%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   1 /  1   (100% -  16%)
+  Op Mem:        1 /  1   (100% -  32%)
+  RB:            8 / 20   ( 40% -  23%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -f suma-mat.s -p 1
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     20
+  E.R. Suma/Resta:    3
+  E.R. Mult/Div:      2
+  E.R. Enteros:       5
+  Buffer lectura:     3
+  Buffer escritura:   3
+  Tipo predictor:     1 bit
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    1           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       1           1     CONV
+  Oper. Memoria:       1           2     CONV
+
+Ciclo 670: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               670
+Instrucciones:        482
+  Operaciones C.F.:    64
+  Saltos:
+    Accedidos:         95
+    Encontrados:       92
+    Ejecutados:        72
+    Acertados:         54
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 /  5   ( 60% -  26%)
+  RS S/R C.F.:   2 /  3   ( 66% -  32%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  3   ( 66% -  39%)
+  RS Almac.:     2 /  3   ( 66% -  44%)
+  Op Enteros:    1 /  1   (100% -  40%)
+  Op S/R C.F.:   1 /  1   (100% -  40%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   1 /  1   (100% -  37%)
+  Op Mem:        1 /  1   (100% -  64%)
+  RB:           10 / 20   ( 50% -  38%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -f suma-mat.s -p 2h
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     20
+  E.R. Suma/Resta:    3
+  E.R. Mult/Div:      2
+  E.R. Enteros:       5
+  Buffer lectura:     3
+  Buffer escritura:   3
+  Tipo predictor:     2 bit con histeresis
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    1           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       1           1     CONV
+  Oper. Memoria:       1           2     CONV
+
+Ciclo 593: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               593
+Instrucciones:        482
+  Operaciones C.F.:    64
+  Saltos:
+    Accedidos:         81
+    Encontrados:       78
+    Ejecutados:        72
+    Acertados:         61
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 /  5   ( 60% -  27%)
+  RS S/R C.F.:   2 /  3   ( 66% -  35%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  3   ( 66% -  41%)
+  RS Almac.:     2 /  3   ( 66% -  49%)
+  Op Enteros:    1 /  1   (100% -  40%)
+  Op S/R C.F.:   1 /  1   (100% -  45%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   1 /  1   (100% -  38%)
+  Op Mem:        1 /  1   (100% -  70%)
+  RB:           10 / 20   ( 50% -  41%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -f suma-mat.s -p 2s
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     20
+  E.R. Suma/Resta:    3
+  E.R. Mult/Div:      2
+  E.R. Enteros:       5
+  Buffer lectura:     3
+  Buffer escritura:   3
+  Tipo predictor:     2 bit con saturacion
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    1           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       1           1     CONV
+  Oper. Memoria:       1           2     CONV
+
+Ciclo 593: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               593
+Instrucciones:        482
+  Operaciones C.F.:    64
+  Saltos:
+    Accedidos:         81
+    Encontrados:       78
+    Ejecutados:        72
+    Acertados:         61
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 /  5   ( 60% -  27%)
+  RS S/R C.F.:   2 /  3   ( 66% -  35%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  3   ( 66% -  41%)
+  RS Almac.:     2 /  3   ( 66% -  49%)
+  Op Enteros:    1 /  1   (100% -  40%)
+  Op S/R C.F.:   1 /  1   (100% -  45%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   1 /  1   (100% -  38%)
+  Op Mem:        1 /  1   (100% -  70%)
+  RB:           10 / 20   ( 50% -  41%)
+
+
+adcarcal@acomp21:~/Documentos/AIC/prac5$ ./mips-ooo -j -f suma-mat.s -p p
+*** Predictor perfecto. Generando traza... ***
+
+ATENCION: Numero de ciclos (1000) excesivo
+          No se generan más ciclos para visualizar
+
+Ciclo 1186: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:              1186
+Instrucciones:        482
+  Operaciones C.F.:    64
+  Saltos:
+    Accedidos:        128
+    Encontrados:        0
+    Ejecutados:        72
+    Acertados:          9
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    3 /  5   ( 60% -  17%)
+  RS S/R C.F.:   1 /  3   ( 33% -  16%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  3   ( 66% -  16%)
+  RS Almac.:     1 /  3   ( 33% -  23%)
+  Op Enteros:    1 /  1   (100% -  28%)
+  Op S/R C.F.:   1 /  1   (100% -  21%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   1 /  1   (100% -  16%)
+  Op Mem:        1 /  1   (100% -  32%)
+  RB:            8 / 20   ( 40% -  23%)
+
+
+*** Traza generada... ***
+
+*** CONFIGURACIÓN ***
+
+  Grado superescalar: 
+        ISSUE:        1
+        BUSES:        1
+        COMMIT:       1
+  Reorder Buffer:     20
+  E.R. Suma/Resta:    3
+  E.R. Mult/Div:      2
+  E.R. Enteros:       5
+  Buffer lectura:     3
+  Buffer escritura:   3
+  Tipo predictor:     Perfecto
+  Buffer predictor:   2
+  Registros:          32
+
+                    Cantidad   Latencia  Tipo
+                    --------   --------  ----
+  Oper. Suma/Resta:    1           4     CONV
+  Oper. Mult/Div:      1           7     CONV
+  Oper. Enteros:       1           1     CONV
+  Oper. Memoria:       1           2     CONV
+
+Ciclo 495: El programa está terminando normalmente
+
+*** ESTADISTICAS ***
+
+Ciclos:               495
+Instrucciones:        482
+  Operaciones C.F.:    64
+  Saltos:
+    Accedidos:         72
+    Encontrados:       72
+    Ejecutados:        72
+    Acertados:         72
+
+Ocupación de recursos:
+               Max / TAM  % max  % med
+  RS Enteros:    5 /  5   (100% -  41%)
+  RS S/R C.F.:   2 /  3   ( 66% -  45%)
+  RS M/D C.F.:   0 /  2   (  0% -   0%)
+  RS Carga:      2 /  3   ( 66% -  56%)
+  RS Almac.:     3 /  3   (100% -  63%)
+  Op Enteros:    1 /  1   (100% -  45%)
+  Op S/R C.F.:   1 /  1   (100% -  51%)
+  Op M/D C.F.:   0 /  1   (  0% -   0%)
+  Op Mem (AC):   1 /  1   (100% -  39%)
+  Op Mem:        1 /  1   (100% -  78%)
+  RB:           12 / 20   ( 60% -  56%)
+ 

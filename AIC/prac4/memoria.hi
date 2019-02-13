@@ -1,0 +1,17 @@
+instruccion_t lee_mem_instruc(
+        dword direccion
+);
+void escribe_mem_instruc(
+        dword direccion,
+        instruccion_t instruccion
+);
+valor_t lee_mem_datos(
+        dword direccion,
+        tipo_t tipo_dato
+);
+void escribe_mem_datos(
+        dword direccion,
+        valor_t valor,
+        tipo_t tipo_dato
+);
+void mem_etiqueta(dword dir, tipo_t tipo);
