@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ModuloAutorizacionSimple()
+comment1.params=nom\ passwd
+comment1.target=boolean\ estaAutorizado(java.lang.String,\ java.lang.String)
+comment2.params=nom\ passwd
+comment2.target=void\ registrarUsuario(java.lang.String,\ java.lang.String)
+numComments=3

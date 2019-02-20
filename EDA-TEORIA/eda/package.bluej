@@ -1,0 +1,24 @@
+#BlueJ package file
+objectbench.height=100
+objectbench.width=904
+package.editor.height=525
+package.editor.width=794
+package.editor.x=26
+package.editor.y=59
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
+project.charset=windows-1252
+target1.height=62
+target1.name=ejemplos
+target1.type=PackageTarget
+target1.width=80
+target1.x=230
+target1.y=10
+target2.height=62
+target2.name=librerias
+target2.type=PackageTarget
+target2.width=80
+target2.x=120
+target2.y=10
