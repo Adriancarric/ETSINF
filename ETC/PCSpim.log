@@ -1,0 +1,175 @@
+Messages
+=========================
+SPIM Version 6.4 of January 1, 2002
+Copyright 1990-2002 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+DOS and Windows ports by David A. Carley (dac@cs.wisc.edu).
+Copyright 1997 by Morgan Kaufmann Publishers, Inc.
+See the file README for a full copyright notice.
+SPIM Version 6.4 of January 1, 2002
+Copyright 1990-2002 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+DOS and Windows ports by David A. Carley (dac@cs.wisc.edu).
+Copyright 1997 by Morgan Kaufmann Publishers, Inc.
+See the file README for a full copyright notice.
+Memory and registers have been cleared, and the simulator reinitialized.
+
+W:\ETC\09_exer_01.s has been successfully loaded
+SPIM Version 6.4 of January 1, 2002
+Copyright 1990-2002 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+DOS and Windows ports by David A. Carley (dac@cs.wisc.edu).
+Copyright 1997 by Morgan Kaufmann Publishers, Inc.
+See the file README for a full copyright notice.
+Memory and registers have been cleared, and the simulator reinitialized.
+
+W:\ETC\09_exer_01.s has been successfully loaded
+SPIM Version 6.4 of January 1, 2002
+Copyright 1990-2002 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+DOS and Windows ports by David A. Carley (dac@cs.wisc.edu).
+Copyright 1997 by Morgan Kaufmann Publishers, Inc.
+See the file README for a full copyright notice.
+Memory and registers have been cleared, and the simulator reinitialized.
+
+W:\ETC\09_exer_02.s has been successfully loaded
+SPIM Version 6.4 of January 1, 2002
+Copyright 1990-2002 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+DOS and Windows ports by David A. Carley (dac@cs.wisc.edu).
+Copyright 1997 by Morgan Kaufmann Publishers, Inc.
+See the file README for a full copyright notice.
+Memory and registers have been cleared, and the simulator reinitialized.
+
+Registers have been cleared.
+
+SPIM Version 6.4 of January 1, 2002
+Copyright 1990-2002 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+DOS and Windows ports by David A. Carley (dac@cs.wisc.edu).
+Copyright 1997 by Morgan Kaufmann Publishers, Inc.
+See the file README for a full copyright notice.
+Memory and registers have been cleared, and the simulator reinitialized.
+
+W:\ETC\09_exer_02.s has been successfully loaded
+
+
+Registers
+=========================
+ PC     = 00400000     EPC    = 00000000     Cause  = 00000000     BadVAddr= 00000000
+ Status = 00000000     HI     = 00000000     LO     = 00000000
+                                 General Registers
+R0  (r0) = 00000000  R8  (t0) = 00000000  R16 (s0) = 00000000  R24 (t8) = 00000000
+R1  (at) = 00000000  R9  (t1) = 00000000  R17 (s1) = 00000000  R25 (t9) = 00000000
+R2  (v0) = 00000000  R10 (t2) = 00000000  R18 (s2) = 00000000  R26 (k0) = 00000000
+R3  (v1) = 00000000  R11 (t3) = 00000000  R19 (s3) = 00000000  R27 (k1) = 00000000
+R4  (a0) = 00000000  R12 (t4) = 00000000  R20 (s4) = 00000000  R28 (gp) = 10008000
+R5  (a1) = 00000000  R13 (t5) = 00000000  R21 (s5) = 00000000  R29 (sp) = 7fffeffc
+R6  (a2) = 00000000  R14 (t6) = 00000000  R22 (s6) = 00000000  R30 (s8) = 00000000
+R7  (a3) = 00000000  R15 (t7) = 00000000  R23 (s7) = 00000000  R31 (ra) = 00000000
+                              Double Floating Point Registers
+FP0  = 0.000000      FP8  = 0.000000      FP16 = 0.000000      FP24 = 0.000000     
+FP2  = 0.000000      FP10 = 0.000000      FP18 = 0.000000      FP26 = 0.000000     
+FP4  = 0.000000      FP12 = 0.000000      FP20 = 0.000000      FP28 = 0.000000     
+FP6  = 0.000000      FP14 = 0.000000      FP22 = 0.000000      FP30 = 0.000000     
+                              Single Floating Point Registers
+FP0  = 0.000000      FP8  = 0.000000      FP16 = 0.000000      FP24 = 0.000000     
+FP1  = 0.000000      FP9  = 0.000000      FP17 = 0.000000      FP25 = 0.000000     
+FP2  = 0.000000      FP10 = 0.000000      FP18 = 0.000000      FP26 = 0.000000     
+FP3  = 0.000000      FP11 = 0.000000      FP19 = 0.000000      FP27 = 0.000000     
+FP4  = 0.000000      FP12 = 0.000000      FP20 = 0.000000      FP28 = 0.000000     
+FP5  = 0.000000      FP13 = 0.000000      FP21 = 0.000000      FP29 = 0.000000     
+FP6  = 0.000000      FP14 = 0.000000      FP22 = 0.000000      FP30 = 0.000000     
+FP7  = 0.000000      FP15 = 0.000000      FP23 = 0.000000      FP31 = 0.000000     
+
+
+Console
+=========================
+
+
+Text Segment
+=========================
+[0x00400000]        0x3c041000  lui $4, 4096 [demana]           ; 9: la $a0, demana        
+[0x00400004]        0x3c011000  lui $1, 4096 [cadena]           ; 10: la $a1, cadena        
+[0x00400008]        0x3425003b  ori $5, $1, 59 [cadena]
+[0x0040000c]        0x34060050  ori $6, $0, 80                  ; 11: li $a2, 80            
+[0x00400010]        0x0c100023  jal 0x0040008c [InputS]         ; 12: jal InputS            
+[0x00400014]        0x3c011000  lui $1, 4096 [respuesta]        ; 14: la $a0, respuesta
+[0x00400018]        0x34240016  ori $4, $1, 22 [respuesta]
+[0x0040001c]        0x3c011000  lui $1, 4096 [cadena]           ; 15: la $a1, cadena
+[0x00400020]        0x3425003b  ori $5, $1, 59 [cadena]
+[0x00400024]        0x0c10002a  jal 0x004000a8 [PromptS]        ; 16: jal PromptS
+[0x00400028]        0x3c011000  lui $1, 4096 [cadena]           ; 18: la $a0, cadena
+[0x0040002c]        0x3424003b  ori $4, $1, 59 [cadena]
+[0x00400030]        0x0c100030  jal 0x004000c0 [StrLength]      ; 19: jal StrLength
+[0x00400034]        0x00024021  addu $8, $0, $2                 ; 21: move $t0, $v0
+[0x00400038]        0x34020004  ori $2, $0, 4                   ; 22: li $v0, 4
+[0x0040003c]        0x3c011000  lui $1, 4096 [length]           ; 23: la $a0, length
+[0x00400040]        0x34240023  ori $4, $1, 35 [length]
+[0x00400044]        0x0000000c  syscall                         ; 24: syscall
+[0x00400048]        0x34020001  ori $2, $0, 1                   ; 25: li $v0, 1
+[0x0040004c]        0x00082021  addu $4, $0, $8                 ; 26: move $a0, $t0
+[0x00400050]        0x0000000c  syscall                         ; 27: syscall
+[0x00400054]        0x3c011000  lui $1, 4096 [cadena]           ; 29: la $a0, cadena
+[0x00400058]        0x3424003b  ori $4, $1, 59 [cadena]
+[0x0040005c]        0x34050000  ori $5, $0, 0                   ; 30: li $a1, 0
+[0x00400060]        0x0c100037  jal 0x004000dc [StrChar]        ; 31: jal StrChar
+[0x00400064]        0x00024021  addu $8, $0, $2                 ; 33: move $t0, $v0
+[0x00400068]        0x34020004  ori $2, $0, 4                   ; 34: li $v0, 4
+[0x0040006c]        0x3c011000  lui $1, 4096 [length]           ; 35: la $a0, length
+[0x00400070]        0x34240023  ori $4, $1, 35 [length]
+[0x00400074]        0x0000000c  syscall                         ; 36: syscall
+[0x00400078]        0x34020001  ori $2, $0, 1                   ; 37: li $v0, 1
+[0x0040007c]        0x00082021  addu $4, $0, $8                 ; 38: move $a0, $t0
+[0x00400080]        0x0000000c  syscall                         ; 39: syscall
+[0x00400084]        0x3402000a  ori $2, $0, 10                  ; 41: li $v0,10
+[0x00400088]        0x0000000c  syscall                         ; 42: syscall
+[0x0040008c]        0x34020004  ori $2, $0, 4                   ; 44: li $v0, 4
+[0x00400090]        0x0000000c  syscall                         ; 45: syscall                        #Imprime el texto de la variable demana
+[0x00400094]        0x34020008  ori $2, $0, 8                   ; 46: li $v0, 8
+[0x00400098]        0x00052021  addu $4, $0, $5                 ; 47: move $a0, $a1
+[0x0040009c]        0x00062821  addu $5, $0, $6                 ; 48: move $a1, $a2
+[0x004000a0]        0x0000000c  syscall                         ; 49: syscall                        #Guarda la cadena en memoria limitando el maximo de caracteres a 80
+[0x004000a4]        0x03e00008  jr $31                          ; 50: jr $ra
+[0x004000a8]        0x34020004  ori $2, $0, 4                   ; 52: li $v0, 4
+[0x004000ac]        0x0000000c  syscall                         ; 53: syscall                        #Imprime el texto de la variable respuesta
+[0x004000b0]        0x00052021  addu $4, $0, $5                 ; 54: move $a0, $a1
+[0x004000b4]        0x34020004  ori $2, $0, 4                   ; 55: li $v0, 4
+[0x004000b8]        0x0000000c  syscall                         ; 56: syscall                        #Imprime la cadena guardada por InputS
+[0x004000bc]        0x03e00008  jr $31                          ; 57: jr $ra
+[0x004000c0]        0x2002ffff  addi $2, $0, -1                 ; 60: addi $v0, $zero, -1
+[0x004000c4]        0x3409000a  ori $9, $0, 10                  ; 61: li $t1, 10
+[0x004000c8]        0x80880000  lb $8, 0($4)                    ; 63: lb $t0, 0($a0)
+[0x004000cc]        0x20840001  addi $4, $4, 1                  ; 64: addi $a0, $a0, 1
+[0x004000d0]        0x20420001  addi $2, $2, 1                  ; 65: addi $v0, $v0, 1
+[0x004000d4]        0x1509fffd  bne $8, $9, -12 [bucle-0x004000d4]; 66: bne $t0, $t1, bucle
+[0x004000d8]        0x03e00008  jr $31                          ; 67: jr $ra
+[0x004000dc]        0x00004020  add $8, $0, $0                  ; 69: add $t0, $zero, $zero
+[0x004000e0]        0x20a50001  addi $5, $5, 1                  ; 70: addi $a1, $a1, 1
+[0x004000e4]        0x80890000  lb $9, 0($4)                    ; 72: lb $t1, 0($a0)
+[0x004000e8]        0x20840001  addi $4, $4, 1                  ; 73: addi $a0, $a0, 1
+[0x004000ec]        0x21080001  addi $8, $8, 1                  ; 74: addi $t0, $t0, 1
+[0x004000f0]        0x14a8fffd  bne $5, $8, -12 [bucle2-0x004000f0]; 75: bne $a1, $t0, bucle2
+[0x004000f4]        0x00091021  addu $2, $0, $9                 ; 76: move $v0, $t1
+[0x004000f8]        0x03e00008  jr $31                          ; 77: jr $ra
+
+        KERNEL
+
+
+Data Segment
+=========================
+
+        DATA
+[0x10000000]                        0x72637345  0x20616269  0x75676c61  0x6320616e
+[0x10000010]                        0x3a61736f  0x61480020  0x63736520  0x6f746972
+[0x10000020]                        0x4c00203a  0x69676e6f  0x20647574  0x6c206564
+[0x10000030]                        0x61632061  0x616e6564  0x0000203a  0x00000000
+[0x10000040]...[0x10040000]        0x00000000
+
+        STACK
+[0x7fffeffc]                        0x00000000
+
+        KERNEL DATA
+[0x90000000]...[0x90010000]        0x00000000
+
+
