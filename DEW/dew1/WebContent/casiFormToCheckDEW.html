@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Formulario a comprobar</title>
+<link rel="stylesheet" href="css/tsr.css" />
+</head>
+<body>
+
+	<div id="tsrStyle" class="tsrForm">
+		<h1>Formulario a comprobar</h1>
+		<form action="http://memex.dsic.upv.es:8080/dew1/Printenv"
+			id="clientForm" method="post">
+			<fieldset>
+				<legend>Datos del producto</legend>
+
+				<label for="codigo">C&oacute;digo </label> <input class="textbox"
+					name="codigo" id="codigo" type="text" /> <label for="precio">Precio
+					por unidad <span class="small">Proporciona un valor
+						num&eacute;rico</span>
+				</label> <input class="textbox" name="precio" id="precio" type="text" />
+
+			</fieldset>
+			<fieldset>
+				<legend>Datos del cliente</legend>
+
+				<label for="dni">DNI<span class="small">8
+						d&iacute;gitos, con la letra separada con un guion ("-")</span>
+				</label> <input class="textbox" name="dni" id="dni" type="text" /> 
+				<label	for="nombre">Apellidos, Nombre<span class="small">Separados
+						por una coma</span>
+				</label> <input class="textbox" name="nombre" id="nombre" type="text" /> 
+				<label
+					for="email" >Correo electr&oacute;nico<span
+					class="small">No olvides la @</span>
+				</label> <input class="textbox" name="email" id="email" type="email" /> <label
+					for="direccion">Direcci&oacute;n de env&iacute;o </label>
+				<textarea class="textbox" name="direccion" id="direccion" rows="3"
+					cols="40"></textarea>
+
+				<label for="select">Departamentos visitados <span
+					class="small">Selecciona al menos uno</span>
+				</label> <select class="textbox" name="select" id="select" size="3"
+					multiple="multiple">
+					<option value="Alimentacion">Alimentaci&oacute;n</option>
+					<option value="Muebles">Muebles</option>
+					<option value="Musica">M&uacute;sica</option>
+					<option value="Otros">Otros</option>
+				</select>
+
+			</fieldset>
+			<fieldset>
+				<legend>Datos de la tarjeta de cr&eacute;dito</legend>
+				<label for="tarj1">Tipo de tarjeta<span class="small">Selecciona
+						el emisor</span>
+				</label>
+
+				<fieldset class="radio">
+					<ul>
+						<li><input class="radiobutton" name="tarjeta" id="tarj1"
+							value="Visa" type="radio" />Visa</li>
+						<li><input class="radiobutton" name="tarjeta" id="tarj2"
+							value="MasterCard" type="radio" />MasterCard</li>
+						<li><input class="radiobutton" name="tarjeta" id="tarj3"
+							value="Amex" type="radio" />American Express</li>
+					</ul>
+				</fieldset>
+
+
+				<label for="numTarj1">N&uacute;mero de tarjeta<span
+					class="small">12 d&iacute;gitos</span>
+				</label> <input class="textbox" name="numTarj1" id="numTarj1"
+					type="password"> <label for="numTarj2">Repite el
+					n&uacute;mero<span class="small">12 d&iacute;gitos</span>
+				</label> <input class="textbox" name="numTarj2" id="numTarj2"
+					type="password">
+
+			</fieldset>
+			<button type="submit">Enviar Orden</button>
+
+		</form>
+	</div>
+</body>
+</html>
