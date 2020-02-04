@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting"
+	xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:amqp="http://www.mulesoft.org/schema/mule/amqp" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/amqp http://www.mulesoft.org/schema/mule/amqp/current/mule-amqp.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <amqp:connector name="AMQP_0_9_Connector" validateConnections="true" doc:name="AMQP-0-9 Connector" password="admin" username="admin" />
+    <http:request-config name="HTTP_Request_Configuration" host="www.dadesobertes.gva.es" port="80" doc:name="HTTP Request Configuration"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="ambulatorios" doc:name="MySQL Configuration"/>
+    <http:request-config name="HTTP_Ministeiro" host="pedvalar.webs.upv.es" port="80" doc:name="HTTP Request Configuration"/>
+    <db:mysql-config name="MySQL_Recetas" host="localhost" port="3306" user="root" database="iap" doc:name="MySQL Configuration"/>
+    <flow name="fromAbulatorioXML">
+        <amqp:inbound-endpoint exchangeName="ambulatorioXML"  exchangeType="topic" responseTimeout="10000" doc:name="AMQP XML" routingKey="pacientes.xml" queueDurable="true"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object" mimeType="text/xml" encoding="UTF-8"/>
+        <file:outbound-endpoint path="C:\RAW" responseTimeout="10000" doc:name="File" outputPattern="recetasRaw.xml"/>
+    </flow>
+    <flow name="fromAbulatorioCSV">
+        <amqp:inbound-endpoint exchangeName="ambulatorioCSV" routingKey="pacientes.csv" exchangeType="topic" responseTimeout="10000" doc:name="AMQP CSV" queueDurable="true"/>
+        <byte-array-to-object-transformer mimeType="text/xml" doc:name="Byte Array to Object"/>
+        <file:outbound-endpoint path="C:\RAW" responseTimeout="10000" doc:name="File" outputPattern="recetasRaw.csv"/>
+    </flow>
+    <flow name="XMltoJSON">
+        <file:inbound-endpoint path="C:\RAW" responseTimeout="10000" doc:name="File" moveToDirectory="C:\RAW historico">
+            <file:filename-regex-filter pattern=".+\.xml" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <object-to-string-transformer doc:name="Object to String" encoding="UTF-8"/>
+        <custom-transformer class="transformadores.XML2JSON" doc:name="Java"/>
+        <file:outbound-endpoint path="C:\RECETAS" responseTimeout="10000" doc:name="File" outputPattern="recetasFromXML.json"/>
+    </flow>
+    <flow name="CSVtoJSON">
+        <file:inbound-endpoint path="C:\RAW" responseTimeout="10000" doc:name="File" moveToDirectory="C:\RAW historico">
+            <file:filename-regex-filter pattern=".+\.csv" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <dw:transform-message metadata:id="6ece8cc6-2a83-4707-9311-04d996f4d1dd" doc:name="Transform Message">
+            <dw:input-payload mimeType="application/csv"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	NUSS: payload01.ss,
+	medicamento: payload01.medicamento,
+	ID: payload01.id,
+	nombrePaciente: payload01.nombre
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <file:outbound-endpoint path="C:\RECETAS" responseTimeout="10000" doc:name="File" outputPattern="recetasFromCSV.json"/>
+    </flow>
+    <flow name="GuardarLlistaAmbulatoris">
+        <poll doc:name="Poll">
+            <fixed-frequency-scheduler frequency="1" timeUnit="DAYS"/>
+            <http:request config-ref="HTTP_Request_Configuration" path="/storage/f/file/20181211132833/centros-sanitarios---2018.json" method="GET" doc:name="HTTP"/>
+        </poll>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <file:outbound-endpoint path="C:/" outputPattern="ambulatorios.json" responseTimeout="10000" doc:name="File"/>
+    </flow>
+    <flow name="StockFarmacias">
+        <amqp:inbound-endpoint exchangeName="stock" routingKey="stock.csv" exchangeType="topic" responseTimeout="10000" doc:name="AMQP-0-9"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <file:outbound-endpoint path="C:/STOCK" outputPattern="stockMedicamentos.csv" responseTimeout="10000" doc:name="File"/>
+    </flow>
+    <flow name="StockAntidepresivos">
+        <amqp:inbound-endpoint exchangeName="antidepresivos" routingKey="lista.csv" exchangeType="topic" responseTimeout="10000" doc:name="AMQP-0-9"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <dw:transform-message metadata:id="1731ebce-7f85-44b1-9762-8c15252d9f3c" doc:name="Transform Message">
+            <dw:input-payload mimeType="application/csv"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	fecha: "27/01/2020",
+	medicamento: payload.medicamento,
+	stock: payload.stock
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <http:request config-ref="HTTP_Ministeiro" path="/iap/rest/ministerio/antidepresivos" method="POST" doc:name="HTTP">
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+    </flow>
+    <!-- 
+    <flow name="InsertBD">
+        <file:inbound-endpoint path="C:\" responseTimeout="10000" doc:name="File">
+            <file:filename-regex-filter pattern=".+\.json" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <json:json-to-object-transformer returnClass="java.util.List" doc:name="JSON to Object"/>
+        <foreach doc:name="For Each">
+            <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                <db:parameterized-query><![CDATA[INSERT INTO `lista`(`codigo`, `nombre`, `direccion`, `municipio`) VALUES (#[message.payload.centros.provincias.provincia.municipios.municipio.tipos_centro.tipo_centro.dependencias_funcionales.dependencia_funcional.centros.centro.num_registro],#[message.payload.centros.provincias.provincia.municipios.municipio.tipos_centro.tipo_centro.dependencias_funcionales.dependencia_funcional.centros.centro.nombre],#[message.payload.centros.provincias.provincia.municipios.municipio.tipos_centro.tipo_centro.dependencias_funcionales.dependencia_funcional.centros.centro.direccion],#[message.payload.centros.provincias.provincia.municipios.municipio.desc_municipio])]]></db:parameterized-query>
+            </db:insert>
+        </foreach>
+    </flow>
+     -->
+     <!-- 
+    <flow name="entregableFlow">
+        <file:inbound-endpoint path="C:\RECETAS" responseTimeout="10000" doc:name="File" moveToDirectory="C:\RECETAS">
+            <file:filename-regex-filter pattern=".+\.json" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <dw:transform-message metadata:id="2c5df7ab-b862-468d-ab1b-9af14dad1641" doc:name="Transform Message">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv
+payload map ((payload01 , indexOfPayload01) -> {
+	nuss: payload01.NUSS,
+	medicamento: payload01.medicamento,
+	id: payload01.ID,
+	nombrePaciente: payload01.nombrePaciente
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <db:insert config-ref="MySQL_Recetas" doc:name="Database">
+            <db:parameterized-query><![CDATA[INSERT INTO `recetas`(`nuss`, `medicamento`, `id`, `nombrepaciente`) VALUES (#[payload[0]],#[payload[1]],#[payload[2]],#[payload[3]])]]></db:parameterized-query>
+        </db:insert>
+    </flow>
+    -->
+</mule>
+

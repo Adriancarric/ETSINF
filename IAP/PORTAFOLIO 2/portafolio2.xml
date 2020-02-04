@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:pop3="http://www.mulesoft.org/schema/mule/pop3" xmlns:pop3s="http://www.mulesoft.org/schema/mule/pop3s" xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/pop3s http://www.mulesoft.org/schema/mule/pop3s/current/mule-pop3s.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd">
+    <pop3s:connector name="POP3" validateConnections="true" doc:name="POP3">
+        
+    </pop3s:connector>
+    <http:request-config doc:name="HTTP Request Configuration" name="csv" port="80" host="personales.upv.es" basePath="/pedvalar/iap/locations"/>
+	<http:request-config doc:name="HTTP Request Configuration" name="json" port="80" host="personales.upv.es" basePath="/pedvalar/iap/locations"/>
+	<http:request-config doc:name="HTTP Request Configuration" name="KML" port="80" host="personales.upv.es" basePath="/pedvalar/iap/locations"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="iap" doc:name="MySQL Configuration"/>
+    <flow name="GetKML">
+        <poll doc:name="Poll">
+            <fixed-frequency-scheduler frequency="1" timeUnit="DAYS"/>
+            <http:request config-ref="KML" path="/coords.kml" method="GET" doc:name="HTTP"/>
+        </poll>
+        <object-to-string-transformer mimeType="application/xml" doc:name="Object to String" />
+        <file:outbound-endpoint path="C:\RAW" outputPattern="coordsHTTP.kml" responseTimeout="10000" doc:name="File"/>
+    </flow>
+    <flow name="GetCSV">
+        <poll doc:name="Poll">
+            <fixed-frequency-scheduler frequency="1" timeUnit="DAYS"/>
+            <http:request config-ref="csv" path="/coords.csv" method="GET" doc:name="HTTP"/>
+        </poll>
+        <object-to-string-transformer mimeType="application/csv" doc:name="Object to String" />
+        <file:outbound-endpoint path="C:\RAW" outputPattern="coordsHTTP.csv" responseTimeout="10000" doc:name="File"/>
+    </flow>
+    <flow name="GetJSON">
+        <poll doc:name="Poll">
+            <fixed-frequency-scheduler frequency="1" timeUnit="DAYS"/>
+            <http:request config-ref="json" path="/coords.json" method="GET" doc:name="HTTP"/>
+        </poll>
+        <object-to-string-transformer mimeType="application/json" doc:name="Object to String" />
+        <file:outbound-endpoint path="C:\RAW" outputPattern="coordsHTTP.json" responseTimeout="10000" doc:name="File"/>
+    </flow>
+    <flow name="Email">
+        <pop3s:inbound-endpoint host="pop.gmail.com" port="995" user="dosportafolioiap" password="2portafolioiap!" connector-ref="POP3" responseTimeout="10000" doc:name="POP3"/>
+        <logger level="INFO" doc:name="Logger" />
+		<expression-transformer doc:name="Expression" >
+			<return-argument evaluator="attachments-list"
+				expression="*" />
+		</expression-transformer>
+		<collection-splitter doc:name="Collection Splitter" />
+		<expression-filter evaluator="groovy" expression="payload != null" doc:name="Expression"/>
+		<expression-filter evaluator="groovy" expression="payload.name != null" doc:name="Expression"/>
+		<message-properties-transformer scope="session" doc:name="Message Properties" >
+			<add-message-property key="attachmentFilename"
+				value="#[groovy:payload.name]" />
+		</message-properties-transformer>
+		<logger
+			message="Email attachment name:  #[header:session:attachmentFilename]"
+			level="INFO" doc:name="Logger"/>
+		<file:outbound-endpoint path="C:/RAW"
+			outputPattern="#[header:session:attachmentFilename]" doc:name="File"
+			responseTimeout="10000" />
+    </flow>
+    <flow name="CSV">
+        <file:inbound-endpoint path="C:/RAW"  responseTimeout="10000" doc:name="File">
+            <file:filename-regex-filter pattern=".+\.csv" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <object-to-string-transformer doc:name="Object to String" />
+        <dw:transform-message metadata:id="47371535-4b25-4de3-9433-2456438c4db8" doc:name="Transform Message">
+            <dw:input-payload mimeType="application/csv"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	coordinates: [payload01.latitud, payload01.longitud],
+	properties: {
+		name: payload01.titulo,
+		desc: payload01.descripcion
+	}
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <json:json-to-object-transformer returnClass="java.util.List" doc:name="JSON to Object" />
+        <foreach doc:name="For Each" >
+            <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                <db:parameterized-query><![CDATA[INSERT INTO `locations`(`id`, `title`, `description`, `latitud`, `longitud`) VALUES (0,#[message.payload.properties.name],#[message.payload.properties.desc],#[message.payload.coordinates[0]],#[message.payload.coordinates[1]])]]></db:parameterized-query>
+            </db:insert>
+        </foreach>
+    </flow>
+    <flow name="JSON">
+        <file:inbound-endpoint path="C:/RAW" responseTimeout="10000" doc:name="File">
+            <file:filename-regex-filter pattern=".+\.json" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <json:json-to-object-transformer returnClass="java.util.List" doc:name="JSON to Object" />
+        <foreach doc:name="For Each">
+            <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                <db:parameterized-query><![CDATA[INSERT INTO `locations`(`id`, `title`, `description`, `latitud`, `longitud`) VALUES (0,#[message.payload.properties.name],#[message.payload.properties.desc],#[message.payload.coordinates[0]],#[message.payload.coordinates[1]])]]></db:parameterized-query>
+            </db:insert>
+        </foreach>
+    </flow>
+    <flow name="XML">
+        <file:inbound-endpoint path="C:/RAW"  responseTimeout="10000" doc:name="File">
+            <file:filename-regex-filter pattern=".+\.kml" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <object-to-string-transformer doc:name="Object to String" />
+        <custom-transformer class="transformadores.XML2JSON" doc:name="Java"/>
+        <json:json-to-object-transformer returnClass="java.util.List" doc:name="JSON to Object" />
+        <foreach doc:name="For Each">
+            <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                <db:parameterized-query><![CDATA[INSERT INTO `locations`(`id`, `title`, `description`, `latitud`, `longitud`) VALUES (0,#[message.payload.properties.name],#[message.payload.properties.desc],#[message.payload.coordinates[0]],#[message.payload.coordinates[1]])]]></db:parameterized-query>
+            </db:insert>
+        </foreach>
+    </flow>
+    
+    
+</mule>
